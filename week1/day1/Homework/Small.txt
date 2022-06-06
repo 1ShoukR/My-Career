@@ -1,0 +1,4 @@
+the command is git status and there is no argument
+the commmand is rm and the arguments are -rf and ./Sample
+the command is Curl. It shows the location the user is in. The arguments
+ -e and -fsSL. the link provided is the option given to the user

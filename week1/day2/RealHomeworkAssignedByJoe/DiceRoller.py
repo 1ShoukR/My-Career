@@ -1,4 +1,8 @@
 
+# This is not done yet. Almost done, just got tired
+
+
+
 import random
 sides = int(input("How many sides should it have? (2-20): "))
 

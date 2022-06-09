@@ -14,26 +14,26 @@
 
 # while loop does something WHILE this is true
 # while (condition to evaluate): 
-  while 2>1:
-   print("Yay")
+#   while 2>1:
+#    print("Yay")
 
-    # Condition can be checked many times
-   fruits = ["apple", "pineapple", "banana"]
-    # for
-     for singular in list
-     for fruit in fruits:
-         print(fruit)
+#     # Condition can be checked many times
+#    fruits = ["apple", "pineapple", "banana"]
+#     # for
+#      for singular in list
+#      for fruit in fruits:
+#          print(fruit)
    
-   # we use lists inside of for loops
-fruits = []
-names = ["students"]
+#    # we use lists inside of for loops
+# fruits = []
+# names = ["students"]
 
 
-   for fruit in fruits:
-     print(fruit)
-     for name in names:
-       num+=1
-       print(name)
+#    for fruit in fruits:
+#      print(fruit)
+#      for name in names:
+#        num+=1
+#        print(name)
 
 # Tip Calculator
 

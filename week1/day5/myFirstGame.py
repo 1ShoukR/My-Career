@@ -55,10 +55,11 @@ It should open the door!
 """)
 
 else:
-    print("""it is on the left side of the doorframe!
- Once you see it, click the third button on that panel! 
+    print("""
+    it is on the left side of the doorframe!
+    Once you see it, click the third button on that panel! 
  
- ***************************************
+    ***************************************
  
  """)
 
@@ -81,26 +82,33 @@ if int(myAnswer) == 1:
      print("You turned the incinerator on. GGs bro nt..")
      exit(0)
 elif int(myAnswer) == 2:
-    print("""That button alerted high command.
-They're sending troops to your cell block.. GGs bro... """)
+    print("""
+    That button alerted high command.
+    They're sending troops to your cell block.. GGs bro... 
+    """)
     exit(0)
 elif int(myAnswer) == 3:
-    print("""That opened the door and shut the security cameras off!
-Now I cannot draw the map of the layout on my secret spy tablet.
-You'll need to guess which way to go before I upload the 
-schematics of the base onto the tablet!
+    print("""
+    That opened the door and shut the security cameras off!
+    Now I cannot draw the map of the layout on my secret spy tablet.
+    You'll need to guess which way to go before I upload the 
+    schematics of the base onto the tablet!
 
 ***************************************
 """)      
 elif int(myAnswer) == 4:
-    print("""Oh god.. That button just alerted the bridge..
-They are sending a task force squad to your cell..
-I've been locked out of the system! I cannot help, I'm sorry..
-They will execute you on site.. GGs bros go next""" )
+    print("""
+    Oh god.. That button just alerted the bridge..
+    They are sending a task force squad to your cell..
+    I've been locked out of the system! I cannot help, I'm sorry..
+    They will execute you on site.. GGs bros go next
+    """ )
     exit(0)
 elif int(myAnswer) == 5:
-    print("""This button literally did nothing.
-Bro just click button 3 man don't make this difficult for yourself """)
+    print("""
+    This button literally did nothing.
+    Bro just click button 3 man don't make this difficult for yourself 
+    """)
     exit(0)
 
 
@@ -143,19 +151,19 @@ hallWayOne()
 
 def armory():
     print("""
-    Welcome to the armory
+        Welcome to the armory
     """)
     sleep(2)
     print("""
-    According to the schematics of the armory,
+        According to the schematics of the armory,
     """)
     sleep(1)
     print("""
-    There should be a weapons rack towards the left side of the room.
+        There should be a weapons rack towards the left side of the room.
     """)
     sleep(1)
     print("""
-    Look to your left. Do you see the weapons rack?
+        Look to your left. Do you see the weapons rack?
     """)
     choice = input(" ----> ")
     while True:
@@ -194,5 +202,7 @@ def weaponsRackPanel():
             Please just say yess...
             """)
 weaponsRackPanel()
+
+
 
 

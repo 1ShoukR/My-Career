@@ -18,14 +18,8 @@ from time import sleep
 
 
 
+## for hallwayone, try the while loop given by Ethan
 
-
-def HallwayOne():
-    print("You have two choices: Left or Right. Which way do you go? ")
-    choice = input("---> ")
-    if choice == 'right':
-        print("Nice! You made it through")
-    return("You've been captured! You will be executed immediately. GGs ")
 
 
 
@@ -86,48 +80,119 @@ myAnswer = panelButtons()
 if int(myAnswer) == 1:
      print("You turned the incinerator on. GGs bro nt..")
      exit(0)
-elif myAnswer == 2:
+elif int(myAnswer) == 2:
     print("""That button alerted high command.
 They're sending troops to your cell block.. GGs bro... """)
     exit(0)
-elif myAnswer == 3:
+elif int(myAnswer) == 3:
     print("""That opened the door and shut the security cameras off!
 Now I cannot draw the map of the layout on my secret spy tablet.
 You'll need to guess which way to go before I upload the 
 schematics of the base onto the tablet!
 
 ***************************************
-""")
-    HallwayOne()
-        
-elif myAnswer == 4:
+""")      
+elif int(myAnswer) == 4:
     print("""Oh god.. That button just alerted the bridge..
 They are sending a task force squad to your cell..
 I've been locked out of the system! I cannot help, I'm sorry..
 They will execute you on site.. GGs bros go next""" )
     exit(0)
-elif myAnswer == 5:
+elif int(myAnswer) == 5:
     print("""This button literally did nothing.
 Bro just click button 3 man don't make this difficult for yourself """)
     exit(0)
 
 
 
+def hallWayOne():
+    print("You have two choices: Left or Right. Which way do you go? ")
+    choice = input("---> ")
+    if choice == 'right':
+        print("""
+        Phew that was a close one.."""
+        )
+        sleep(2)
+        print("""
+        The schematics of the base have been uploaded to my tablet
+        """)
+        sleep(2)
+        print("""
+        You're lucky.. Had you have turned left, a squad of stromtroopers would have
+        captured you and 'taken care of you' 
+        """)
+        sleep(2)
+        print("""
+        Keep going forward. The armory is just ahead.
+        Best to get you some blasters...
+        """)
+    else:
+        sleep(2)
+        print("""
+        ......."""
+        ) 
+        sleep(2)
+        print("You've been captured! You will be executed immediately. GGs ")
+        exit(0)
+hallWayOne()
 
 
+#The while loop isnt working here
+## Got it to work poggies
 
 
+def armory():
+    print("""
+    Welcome to the armory
+    """)
+    sleep(2)
+    print("""
+    According to the schematics of the armory,
+    """)
+    sleep(1)
+    print("""
+    There should be a weapons rack towards the left side of the room.
+    """)
+    sleep(1)
+    print("""
+    Look to your left. Do you see the weapons rack?
+    """)
+    choice = input(" ----> ")
+    while True:
+        if choice == 'yes':
+            print("""
+        Great, Go to that weapons rack. 
+        There should be a panel to release the weapons rack safety latch
+        """)
+            return choice
+        else:
+            sleep(2)
+            print("""
+            Keep looking! It is not on the right side of the room,
+            or in front of you. It is to the left!
+            """)
+            choice = input(" ----> ")
+armory()
 
 
+#The while loop is not working for some reason
+## Got it to work poggies
 
 
-
-
-
-    
-
-
-
-
+def weaponsRackPanel():
+    while True:
+        weaponsRack = input("Do you want to press the weapon rack safety release button? Please type yes or no: ")
+        if weaponsRack.lower() == "yes":
+            sleep(.5)
+            print("""
+                INTERCOM: 
+                *Weapons door opening up*
+                """)
+            return weaponsRack
+        elif weaponsRack.lower() == "no":
+            print("""
+            Please just say yess...
+            """)
+weaponsRackPanel()
 
 

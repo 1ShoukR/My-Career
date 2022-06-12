@@ -203,6 +203,31 @@ def weaponsRackPanel():
             """)
 weaponsRackPanel()
 
-
-
+def hallWayTwo():
+    print("""
+        Nice! You have aquired a blaster pistol from the weapons rack
+        """)
+    sleep(2)
+    print("""
+        There is another hallway coming up in front of you.
+        Be careful. There is a barracks system attached right
+        to this hallway. Enemies can come out whenever 
+        """)
+    sleep(2)
+    print("""
+        Oh no.. The door opened up..
+        I see two heat signatures coming through the door,
+        You have to be quick. You can either hide,
+        or you can fight. If there are only two of them,
+        and you take them out, you may be able to upgrade your weapon.
+        """)
+    playerAction = input("""
+        Do you want to fight or hide?
+        """)
+    if playerAction.lower == "fight":
+        sleep(2)
+        print("""
+        They have auto blasters! Be accurate and hit your shots!
+        """)
+hallWayTwo()
 

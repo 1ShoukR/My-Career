@@ -57,19 +57,19 @@ from math import fsum
 
 # 7 multiply a list
 
- # this below is the short hand versom
+## this below is the short hand versom
 # num = [1, 2, 3, 4, 5, 6]
 
 # multipliedList = [item * 2 for item in num]
 # print(multipliedList)
 
-# This is long hand version
+## This is long hand version
 
 # num = [1, 2, 3, 4, 5, 6]
 
 # multipliedList = [item * 2 for item in num]
 
- # for item in num:
+# for item in num:
 #     print(multipliedList)
 #     break
 

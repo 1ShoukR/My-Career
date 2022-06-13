@@ -58,10 +58,10 @@ else:
     print("""
     it is on the left side of the doorframe!
     Once you see it, click the third button on that panel! 
- 
+
     ***************************************
- 
- """)
+
+""")
 panel()
 
 
@@ -78,8 +78,8 @@ def panelButtons():
 myAnswer = panelButtons()
 
 if int(myAnswer) == 1:
-     print("You turned the incinerator on. GGs bro nt..")
-     exit(0)
+    print("You turned the incinerator on. GGs bro nt..")
+    exit(0)
 elif int(myAnswer) == 2:
     print("""
     That button alerted high command.
@@ -202,6 +202,17 @@ def weaponsRackPanel():
             """)
 weaponsRackPanel()
 
+
+
+
+
+
+
+
+
+
+
+
 def hallWayTwo():
     print("""
         Nice! You have aquired a blaster pistol from the weapons rack
@@ -223,23 +234,23 @@ def hallWayTwo():
     playerAction = input("""
         Do you want to fight or hide?
         """)
-    if playerAction.lower == "fight":
-        sleep(2)
-        print("""
-        They have auto blasters! Be accurate and hit your shots!
-        """)
+    while playerAction != 'fight' and playerAction != 'hide':
+        playerAction = input('Choose only hide or run, quickly!!')
+    if playerAction == "fight":
         fightSceneOne()
         # Make another function for the "Fight" scene and invoke it here
-    elif playerAction.lower == "hide":
+    elif playerAction == "hide":
         print("""
-            Get behind that pillar to the right! 
+            Get behind that pillar to the right!
             That is the only bit of cover I can see for you.
             """)
         hideSceneOne()
             # Make another function for the "Hide" scene and invoke it here
-hallWayTwo()
 
 def fightSceneOne():
+    print("""
+    They have auto blasters! Be accurate and hit your shots!
+        """)
     print("""
         *Two Stormtroopers round the hallway unaware of you*
         """)
@@ -252,14 +263,9 @@ def fightSceneOne():
     Stormtrooper 2: 'I'm not sure..
         He has a blaster! BLAST EM!
         """)
-fightSceneOne()
-
-
-
-
 def hideSceneOne():
     print("""
-        *Two stormtroopers round the hallway unaware of you*
+    *Two stormtroopers round the hallway unaware of you*
         """)
     sleep(1.5)
     print("""
@@ -270,9 +276,10 @@ def hideSceneOne():
         'Bro I have no clue whatsoever he just seemed like an absolute b**** toda..
         """)
     sleep(.5)
-    print("""
+    print('''
+
         *You peek out of your hiding space and see both stormtroopers being force choked out of the blue*
-        """)
-hideSceneOne()
 
+        ''')
 
+hallWayTwo()

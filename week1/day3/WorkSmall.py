@@ -1,14 +1,13 @@
-# sum of the numbers
-
-
-
 from math import fsum
+
+
+## sum of the numbers
 
 
 # num = [1, 2, 3, 4, 5]
 # print(sum(num))
 
-# Largest Number
+## Largest Number
 
 
 
@@ -18,7 +17,7 @@ from math import fsum
 
 
 
-# smallest Numbers
+## smallest Numbers
 
 
 
@@ -26,7 +25,8 @@ from math import fsum
 # num.sort()
 # print("The smallest number in the list is..", (num[0]))
 
-# 4 Even numbers
+
+## 4 Even numbers
 
 
 
@@ -37,7 +37,7 @@ from math import fsum
 #         print(i, end=" ")
     
 
-# 5 positive numbers
+##  5 positive numbers
 # num = [1, 2, 3, 4, 5, 6]
 
 # for i in num:
@@ -45,7 +45,7 @@ from math import fsum
 #         print(i, end=" ")
 
 
-#  6 positive numbers II
+##   6 positive numbers II
 # num = [1, 2, 3, 4, 5, 6]
 # list1 = []
 
@@ -55,7 +55,7 @@ from math import fsum
 # print(list1, end= " ")
 
 
-# 7 multiply a list
+##  7 multiply a list
 
 ## this below is the short hand versom
 # num = [1, 2, 3, 4, 5, 6]
@@ -75,13 +75,13 @@ from math import fsum
 
 
 
-# 8 Reverse a string
+## 8 Reverse a string
 
 # txt = "hello world" [::-1]
 # print(txt)
 
 
-#Caesar Cypher decryption( bruh why this so difficult..)
+## Caesar Cypher decryption( bruh why this so difficult..)
 
 # Just spitting out the original text
 # encryptedText = "lbh zhfg hayrnea jung lbh unir yrnearq"
@@ -95,7 +95,7 @@ from math import fsum
 # translation of the text
 
 
-#way too hard...
+## way too hard...
 
 
 # encryptedText = "lbh zhfg hayrnea jung lbh unir yrnearq"

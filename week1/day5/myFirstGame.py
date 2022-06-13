@@ -62,8 +62,7 @@ else:
     ***************************************
  
  """)
-
-    panel()
+panel()
 
 
 
@@ -229,5 +228,51 @@ def hallWayTwo():
         print("""
         They have auto blasters! Be accurate and hit your shots!
         """)
+        fightSceneOne()
+        # Make another function for the "Fight" scene and invoke it here
+    elif playerAction.lower == "hide":
+        print("""
+            Get behind that pillar to the right! 
+            That is the only bit of cover I can see for you.
+            """)
+        hideSceneOne()
+            # Make another function for the "Hide" scene and invoke it here
 hallWayTwo()
+
+def fightSceneOne():
+    print("""
+        *Two Stormtroopers round the hallway unaware of you*
+        """)
+    sleep(2)
+    print("""
+        Stormtrooper 1: 'Yo bro why was... Wait.. How did he get out?!
+        """)
+    sleep(1.5)
+    print("""
+    Stormtrooper 2: 'I'm not sure..
+        He has a blaster! BLAST EM!
+        """)
+fightSceneOne()
+
+
+
+
+def hideSceneOne():
+    print("""
+        *Two stormtroopers round the hallway unaware of you*
+        """)
+    sleep(1.5)
+    print("""
+    Stormtrooper 1: 'Yo bro why was Darth Vader being all moody today'
+        """)
+    sleep(.5)
+    print("""
+        'Bro I have no clue whatsoever he just seemed like an absolute b**** toda..
+        """)
+    sleep(.5)
+    print("""
+        *You peek out of your hiding space and see both stormtroopers being force choked out of the blue*
+        """)
+hideSceneOne()
+
 

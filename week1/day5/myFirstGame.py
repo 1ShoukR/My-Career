@@ -8,13 +8,23 @@ from time import sleep
 
 
 
-# to do list: 
-# use while loops 
-# introduce list 
-# use a dictionary
-# loop and nested loop 
-# make break proof and make user input what i want
+# Game Requirements: 
+    # Dont make variables that you dont use (review after you are done)
+    # Clean print system
+    # Ability to replay the game (need to add this)
+    # Ability to exit the game (need to add this)
+    # Adding/Removing stuff from a list (need to add this)
+    # One class at minimum
+    # use while loops (This is done)
+    # introduce list 
+    # use a dictionary
+    # loop and nested loop 
+    # make break proof and make user input what i want
 
+### PLAN FOR GAME: 
+    # have four hallways
+        # at hallway three, give the player an option to add something to their list
+    # on the fourth and last hallway, have them fight Cad Baine, the notorious bounty hunter 
 
 
 
@@ -22,70 +32,153 @@ from time import sleep
 
 
 
+# print ("""Hello! My name is Sherry! 
+# I'll be your eyes and ears while you're inside the Empire's battlestation 
+
+# ***************************************
+
+# """)
+# sleep(3)
+# print("Looks like you guys are in cell block three.")
+# sleep(3)
+
+def mainMenu():
+    sleep(2)
+    print("Star Wars: The Escape from Cad Baine")
+    sleep(2)
+    print("""
+    Welcome to the Main Menu!
+    """)
+    print("""
+    This game was created by Rahmin Shoukoohi
+    """)
+    sleep(2)
+    print("""
+        Please choose the option you would like!
+        1. Play game
+        2. Quit game
+        """)
+    userChoice = input("""
+        -------> """)
+    if userChoice == "1":
+        print("""
+        *Game is starting*
+        """)
+        sleep(2)
+        # put a new function in here
+    elif userChoice == "2":
+        print("""
+        Goodbye!
+        """)
+        sleep(2)
+        exit(0)
+mainMenu()
 
 
+def cutScene():
+    sleep(2)
+    print("""
+    *You wake up in a daze.*
+    """)
+    sleep(2)
+    print("""
+    *you try and move but realize your hands are cuffed up*
+    """)
+    sleep(2)
+    print("""
+    *As your vision starts to adjust, you realize you're in a cell*
+    """)
+    sleep(2)
+    print("""
+    'My head.. god it hurts'
+    """)
+    sleep(2)
+    print("""
+    'what the?! They didn't check for my AI
+    """)
+    aiOn = input("""
+    'I need to turn the AI on in order for it to work'
+    Do you want to turn the AI on? Type yes or no: 
+    """)
+    while True:
+        if aiOn == 'yes':
+            sleep(2)
+            print("""
+            *AI INITIALIZING*
+            'Greetings. Please re-initialize me.'
+            """)
+            return 
+        else:
+            sleep(2)
+            print("""
+            You cannot move forward without initializing your AI
+            """)
+            aiOn = input(": ")
+aiOn = cutScene()
+if aiOn == "yes":
+    print("""
+            *AI INITIALIZING*
+            'Greetings. Please re-initialize me.'
+            """)
+    panel()
+cutScene()
 
-print("""Hello! My name is Sherry! 
-I'll be your eyes and ears while you're inside the Empire's battlestation 
-
-***************************************
-
-""")
-sleep(3)
-print("Looks like you guys are in cell block three.")
-sleep(3)
-
+# Need to fix above while loop
 
 def panel():
-
-    return input("""Do you see a panel with 5 buttons? 
+    input("""Do you see a panel with 5 buttons? 
     (Yes/no) 
     
 ***************************************
     
     """)
 
-if panel() == 'yes':
-    print("""Great! 
-Now click the third button on that panel. 
-It should open the door!
+    while panel == 'yes':
+        print("""Great! 
+        Now click the third button on that panel. 
+        It should open the door!
 
-***************************************
+        ***************************************
 
-""")
+        """)
+        break
+    
+    else:
+        print("""
+        it is on the left side of the doorframe!
+        Once you see it, click the third button on that panel! 
 
-else:
-    print("""
-    it is on the left side of the doorframe!
-    Once you see it, click the third button on that panel! 
+        ***************************************
 
-    ***************************************
-
-""")
+    """)
+        panel()
 panel()
-
 
 
 def panelButtons():
     while True:
-        myAnswer = input("choose which button you want to press ")
+        sleep(1)
+        myAnswer = input("""
+        choose which button you want to press 
+        """)
         try:
             myAnswer = int(myAnswer)
             return myAnswer
         except:
+            sleep(1)
             print("Just choose a number.. ")
 
 myAnswer = panelButtons()
 
 if int(myAnswer) == 1:
     print("You turned the incinerator on. GGs bro nt..")
-    exit(0)
+    mainMenu()
 elif int(myAnswer) == 2:
     print("""
     That button alerted high command.
     They're sending troops to your cell block.. GGs bro... 
     """)
-    exit(0)
+    mainMenu()
 elif int(myAnswer) == 3:
     print("""
     That opened the door and shut the security cameras off!
@@ -93,7 +186,7 @@ elif int(myAnswer) == 3:
     You'll need to guess which way to go before I upload the 
     schematics of the base onto the tablet!
 
-***************************************
+    ***************************************
 """)      
 elif int(myAnswer) == 4:
     print("""
@@ -102,13 +195,13 @@ elif int(myAnswer) == 4:
     I've been locked out of the system! I cannot help, I'm sorry..
     They will execute you on site.. GGs bros go next
     """ )
-    exit(0)
+    mainMenu()
 elif int(myAnswer) == 5:
     print("""
     This button literally did nothing.
     Bro just click button 3 man don't make this difficult for yourself 
     """)
-    exit(0)
+    mainMenu()
 
 
 
@@ -201,15 +294,6 @@ def weaponsRackPanel():
             Please just say yess...
             """)
 weaponsRackPanel()
-
-
-
-
-
-
-
-
-
 
 
 

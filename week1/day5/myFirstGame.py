@@ -107,20 +107,13 @@ def cutScene():
             *AI INITIALIZING*
             'Greetings. Please re-initialize me.'
             """)
-            return 
+            return panel() 
         else:
             sleep(2)
             print("""
             You cannot move forward without initializing your AI
             """)
             aiOn = input(": ")
-aiOn = cutScene()
-if aiOn == "yes":
-    print("""
-            *AI INITIALIZING*
-            'Greetings. Please re-initialize me.'
-            """)
-    panel()
 cutScene()
 
 # Need to fix above while loop

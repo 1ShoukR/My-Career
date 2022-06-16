@@ -5,7 +5,9 @@ import sys
 from turtle import left, right
 from time import sleep
 import random
+from typing import final
 from pip import main
+
 
 
 
@@ -13,7 +15,7 @@ from pip import main
 # Game Requirements: 
     # Dont make variables that you dont use (review after you are done)
     # Clean print system
-    # Ability to replay the game (need to add this) 
+    # Ability to replay the game (need to add this) (done)
     # Ability to exit the game (need to add this) (done)
     # Adding/Removing stuff from a list (need to add this)
     # One class at minimum
@@ -27,6 +29,8 @@ from pip import main
         # at hallway three, give the player an option to add something to their list
     # on the fourth and last hallway, have them fight Cad Baine, the notorious bounty hunter 
 
+
+# WRITE.MY. ARTICLE. ON. THIS. PROJECT.
 
 
 ## for hallwayone, try the while loop given by Ethan (Works. Shoutout Ethan!!)
@@ -45,9 +49,6 @@ from pip import main
 
 
 playerInventory = []
-
-
-
 
 def mainMenu():
     # sleep(2)
@@ -302,13 +303,12 @@ def weaponsRackPanel():
                 *Weapons door opening up*
                 """)
             addWeaponFromWeaponsRack()
-            return weaponsRack
+            break
         elif weaponsRack.lower() == "no":
             print("""
             Please just say yess...
             """)
 def addWeaponFromWeaponsRack():
-
     print("""
     Nice! You found a blaster rifle!
     Would you like to add it to your inventory?
@@ -321,23 +321,131 @@ def addWeaponFromWeaponsRack():
             
             {playerInventory}
             """)
+            print("""
+            Perfect. We are now armed. I feel like we will
+            need to use it pretty soon...
+            """)
+            finalHallWay()
             return addToInv
         elif addToInv != "yes":
             print("""
             You don't got a choice buddy.
             PICK. UP. THE. BLASTER. RIFLE. NOW
             """)
+def finalHallWay():
+    print("""
+    Now that you are armed, lets head to the docking bay
+    to secure you a ship and get the hell outta here.
+    My schematics say that the docking bay has one ship currently.
+    Lets go ahead and head there right now. 
+    """)
+    playerDirection = input("""There are two directions.
+        Choose either 'left' or 'right' 
+        """)
+    if playerDirection.lower() == 'left':
+        print(""" This is a dead end. Turn around.
+        """)
+        input("""
+        Turn around? 
+        type yes or no """)
+        finalHallWay()
+    if playerDirection.lower() == 'right':
+        print("""
+        There it is! A straight shot to the docking bay!
+        LET'S GET OUTTA HERE!!
+        """)
+        dockingBay()
+def dockingBay():
+    print("""
+    There it is! The docking bay!
+    """)
+    print("""
+    Wait.. I am detecting a singular heat signature coming in.
+    """)
+    print("""
+    No.. it can't be..
+    """)
+    print("""
+    *Mysterious figure steps out of the single ship*
+    """)
+    print("""
+    'Oh but it is. It is I, CAD BANE, the infamous
+    bounty hunter!'
+    """)
+    print("""
+    oh my he refers to himself as the best..
+    **whispers 'guess he hasn't heard about Boba Fett then'**
+    """)
+    print("""'Oh but I am familiary with Boba Fett.
+    Yes that is right, I left your AI within you
+    because I bugged it to hear all of your communications
+    between you two.'
+    """)
+    print("""'The empire has promised me a pretty penny for your head.
+    This was just a fun game that I like playing with my prey.'
+    """)
+    print("""'Now, you must die.'
+    """)
+    print("""
+    It's time to use the blaster rifle..
+    """)
+    finalBoss()
+def finalBoss():
+    class Character():
+        def __init__(self, name, damage, health):
+            self.name = name
+            self.damage = damage
+            self.health = health
+        def do_damage(self, enemy):
+            damage = self.damage
+            enemy.health = enemy.health - damage
+            if damage == 0: 
+                print("He avoided your attack!" , (enemy.name, self.name))
+            else:
+                print("%s hurts %s!" % (self.name, enemy.name))
+            return enemy.health <= 0
+    class enemy():
+        def __init__(self, name, damage, health):
+            self.name = name
+            self.damage = damage
+            self.health = health
+    cadBain = enemy("Cad Baine", 10, 100)
+    playerName = Character("Xannder Bofa", 15, 100)
+    while playerName.health > 0 and cadBain.health > 0:
+        print("""
+        Mf about to attack
+        Do you wanna fight back or defend? 
+        please enter 1 for fight, and 2 for defend. """)
+        playerAction = input("===> ")
+        if playerAction != "1" and playerAction!= "2":
+            print("""
+            Wrong input!
+            """)
+            continue
+        elif playerAction == "1":
+            playerName.do_damage(cadBain)
+            print("This is your health: " + str(playerName.health) )
+            print("This is Cad Bane's health: " + str(cadBain.health) )
+        elif playerAction == "2":
+            print("""
+            You have defended youself!
+            """)
+            playerName.health -= cadBain.damage
+            print("This is your health: " + str(playerName.health) )
+            print("This is Cad Bane's health: " + str(cadBain.health) )
+    if cadBain.health <= 0:
+        print("""
+        You defeated Cad Bane! Get on his
+        ship and get out of here fast!
+        """)
+        print("""
+        GGs bro
+        """)
+        mainMenu()
+    else: 
+        print("""
+        Cad Bane has murdered you nt fool hit the range
+        """)
+        mainMenu()
 
 mainMenu()
-
-class Cad_Baine (object):
-    health = 100
-    defence = 50
-    pass
-
-
-
-class player (object):
-    health = 110
-    defence = 40
-    

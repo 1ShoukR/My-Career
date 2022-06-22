@@ -1,0 +1,84 @@
+.pizzaHut{
+    height: auto;
+    width: auto;
+    position: relative;
+    height: 3cm;
+    top: 10px;
+    left: 180px
+}
+
+.CustomerName{
+    font-size: smaller;
+}
+
+.CustomerAddress{
+    font-size: smaller;
+}
+
+.CustomerNumber{
+    font-size: smaller;
+}
+
+.ReachCustomer{
+    position: relative;
+    left: 310px;
+    bottom: 32px;
+    font-size: 13.4px;
+}
+
+
+.description{
+    font-size: 17px;
+}
+
+.MenuTxt{
+    position: relative;
+    bottom: 17px;
+    font-size: 15px;
+}
+.AddressInput{
+    position: relative;
+    height: auto;
+    width: auto;
+    left: 74px
+}
+
+.NameInput{
+    position: relative;
+    height: auto;
+    width: auto;
+    left: 95px;
+}
+
+
+.NumberInput{
+    position: relative;
+    height: auto;
+    width: auto;
+    left: 5px
+}
+
+.ContinueButton{
+    position: relative;
+    height: auto;
+    width: auto;
+    left: 200px;
+    bottom: 44px
+}
+
+.BottomLine{
+    position: relative;
+    height: auto;
+    width: auto;
+    bottom: 48px;
+}
+
+
+.bottomPic{
+    height: auto;
+    width: auto;
+    position: relative;
+    height: 50px;
+    left: 170px;
+    bottom: 40px;
+}

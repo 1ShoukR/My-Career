@@ -1,0 +1,35 @@
+.Google{
+    color: white;
+    align-items: center;
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.eyeglass{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 38%;
+    top: 30%
+}
+
+.textbar{
+    position:absolute;
+    left: 42%;
+    top: 30%;
+}
+
+.Feeling_lucky{
+    position: absolute;
+    left: 49%;
+}
+
+.search{
+    position: absolute;
+    left: 42%
+}
+
+.darkMode{
+    background-color: black;
+}

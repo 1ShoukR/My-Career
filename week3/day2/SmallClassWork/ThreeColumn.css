@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    height: 700px;
+    width: 700px;
+
+}
+
+.red{
+    background-color: #ff5f5f;
+    width: 300px;
+
+}
+
+.blue{
+    background-color: #5fafff;
+    width: 300px;
+}
+
+.yellow{
+    background-color: #ffff5f;
+    width: 300px;
+}
+
+
+.one{
+    display: flex;
+    align-items: center;
+    
+}
+
+

@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(spaceman.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.container{
+    display: flex;
+    height: 500px;
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 15px 15px 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: whitesmoke;
+
+}
+.signIn{
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 40px;
+}
+.box{
+    padding: 12px;
+    width: 65%;
+    margin: 15px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 20px;
+}
+
+.submit{
+    padding: 10px 15px;
+    width: 40%;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
+
+.submit:hover{
+    cursor: pointer;
+    background-color: #750000;
+}
+
+.passwordReset{
+    text-decoration: none;
+    color: black;
+    margin-top: -10px;
+}
+
+.passwordReset:hover{
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: rgb(151, 27, 189);
+}
+
+.avatarIMG{
+    width: 310px;
+    height: 310px;
+
+}
+
+
+.boxcheck{
+    font-size: smaller;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.welcome{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+

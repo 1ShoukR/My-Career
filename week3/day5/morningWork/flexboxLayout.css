@@ -1,4 +1,42 @@
+
+.container{
+    flex-direction: row;
+    display: flex;
+    column-gap: 30px;
+}
+
+
+
 .header{
-    display: flexbox
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+.sidebar{
+    height: 600px;
+    width: 300px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid black ;
+    gap: 30px;
+}
+
+.rightbox{
+    border: 1px solid black;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 400px;
+}
+
+.footer{
+    border: 1px solid black;
+    display: flex;
+    margin-top: 700px;
+    justify-content: left;
+    align-items: left;
     
 }

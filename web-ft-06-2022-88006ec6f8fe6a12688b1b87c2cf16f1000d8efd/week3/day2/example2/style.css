@@ -1,0 +1,31 @@
+.main-container {
+  border: 2px solid #6aa379;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+.content {
+  display: flex;
+  width: auto;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+  /* border: 2px solid #6edbbe; */
+}
+.footer {
+  /* border: 2px solid #7557b5; */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+p {
+  width: 20%;
+}
+.sub-footer {
+  display: flex;
+  width: 100%;
+}

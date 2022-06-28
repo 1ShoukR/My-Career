@@ -1,0 +1,6 @@
+.strike li {
+  text-decoration: line-through;
+}
+.check-button {
+  background-color: aliceblue;
+}

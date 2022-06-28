@@ -101,7 +101,7 @@ const finalFunction = (number) =>{
     return emptyArray
 }
 console.log(finalFunction(1))
-console.log(finalFunction(10))
+week4/day2console.log(finalFunction(10))
 console.log(finalFunction(-1))
 
 

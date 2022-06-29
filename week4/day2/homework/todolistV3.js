@@ -23,7 +23,7 @@ const addToList = () =>{
     list.innerText = userInput
     container.append(list, checkOffButton, removeButton)
 }
-submit.click = addToList
+submit.click = addToList // ask about this
 
 
 

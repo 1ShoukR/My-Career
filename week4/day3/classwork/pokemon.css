@@ -1,0 +1,47 @@
+.body{
+    background-image: url(https://bit.ly/3a4nYby);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+
+
+.pokemon-card{
+    display: grid;
+    width: 350px;
+    background-image: url(https://bit.ly/3QUzw1F);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.pokemon-name{
+    font-size: medium;
+    color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.pokemon-img{
+    position: relative;
+    top: -90px;
+    right: -70px;
+    column-gap: 30px;
+    height: 200px;
+    width: 200px;
+}
+
+.pokemon-description{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -6px;
+
+}

@@ -2,7 +2,6 @@ const dropDown = document.getElementById("pokemon")
 const showContentContainer = document.querySelector(".pokemon-card")
 const pokemonChoice = (pokemon) => {
     showContentContainer.innerHTML = null
-    console.log("hi")
     const pokeName = document.createElement("h1")
     const pokeImg = document.createElement("img")
     const pokeDescription = document.createElement("p")

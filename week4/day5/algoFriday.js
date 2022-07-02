@@ -23,17 +23,17 @@
 // removeNthFromEnd()
 
 
+
+// REMOVE DUPLICATES FROM A SORTED LIST
 head = [1,1,2]
 
 
 var deleteDuplicates = function (head) {
+    let dummyNode = new ListNode(-1, head)
     let current = head;
-    while (current !== null && current.next !== null) {
-    if (current.val === current.next.val) {
-        current.next = current.next.next;
-    } else {
-        current = current.next;
-    } 
+    let previous = dummyNode
+    while (current){
+        if(current.val === previous.val){
     }
-    return head;
 };
+}

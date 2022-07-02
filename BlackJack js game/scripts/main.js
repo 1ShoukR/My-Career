@@ -1,170 +1,164 @@
-const dealerHand = document.getElementById("dealer-hand")
-const playerHand = document.getElementById("player-hand")
-
-const dealerPoints = document.getElementById("dealer-points")
-const playerPoints = document.getElementById("player-points")
-
-
-const dealBtn = document.getElementById("deal-button")
-const hitBtn = document.getElementById("hit-button")
-const standBtn = document.getElementById("stand-button")
-
-let deck = []
-const suits = ["hearts", "spades", "clubs", "diamonds"]
-const ranks = [1,2,3,4,5,6,7,8,9,10,11,12,13]
-let playerCards = []
-let dealerCards = []
-
-
 window.addEventListener('DOMContentLoaded', () => {
   // Execute after page load
+  alert("Welcome to BlackJack! Made by Rahmin Shoukoohi")
+  alert("You should probably know that I ripped my hari out making this..")
+  alert("But I do hope you enjoy :) ")
+  alert("The game might be a little buggy.. So sorry in advance! I will fix it all :3")
 })
 
 
-const createCard = (rank, suit) =>{
-  const card = {
-    rank: rank,
-    suit: suit,
-    pointValue: rank > 10 ? 10: rank,
-  }
-  deck.push(card)
+// Divs where cards are gonna be placed on the table
+const dealerHand = document.getElementById("dealer-hand")
+const playerHand = document.getElementById("player-hand")
+// the points that the player and dealer have
+const dealerPoints = document.getElementById("dealer-points")
+const playerPoints = document.getElementById("player-points")
+// buttons used for the BlackJack table
+const dealBtn = document.getElementById("deal-button")
+const hitBtn = document.getElementById("hit-button")
+const standBtn = document.getElementById("stand-button")
+// essential code for storing the created deck of cards and card information
+let deck = []
+const suits = ["hearts", "spades", "clubs", "diamonds"]
+let playerCards = []
+let dealerCards = []
+
+// game Functions
+const createAdeck = () => {
+    for (let rank = 1; rank <= 13; rank++) {
+      for (let suit of suits) {
+        deck.push(createACard(suit, rank));
+      }
+      console.log(deck);
+    }
+};
+
+
+const createACard = (suit, rank) =>{
+    return {
+      suit: suit,
+      rank: rank,
+      value:
+        rank === 1 ? { primary: 11, secondary: 1 }: rank > 10 ? { primary: 10 }: { primary: rank },
+      // shoutout west for that ^^
+    };
 }
 
-for (let suit of suits){
-  for (let rank of ranks) {
-    createCard(rank, suit)
-  }
+// get card from deck 
+const cardDraw = () =>{
+  const randomPlayerCard = Math.floor(Math.random() * deck.length - 1) + 1;
+  // console.log(randomPlayerCard)
+  return deck.splice(randomPlayerCard, 1)[0];
 }
 
-const playerHandDraw = () =>{
-  const randomPlayerCard = Math.floor(Math.random() * deck.length - 1) + 1
-  console.log(randomPlayerCard)
-  return deck.splice(randomPlayerCard, 1)[0]
-}
+const addPlayerCard = () => {
+  const card = cardDraw();
+  playerCards.push(card);
+  renderCard(card, playerHand);
+};
 
-
-
-const addFirstDealerCard = () =>{
-  const dealerCardOne = playerHandDraw()
-  const dealerCardOneNumber = Object.values(dealerCardOne)[2]
-  console.log(dealerCardOne)
-  const dealerCardOneSuit = Object.values(dealerCardOne)[1]
-  dealerCard1sum = dealerCardOneNumber
-  dealerCard1Suit = dealerCardOneSuit
-  console.log(deck)
-  dealerCards.push(dealerCard1sum + dealerCard1Suit);
-  dealerHand.append("card: ", dealerCard1sum , " of ", dealerCard1Suit, ". ")
-}
-const addSecondDealerCard = () =>{
-  const dealerCardTwo = playerHandDraw()
-  const dealerCardTwoNumber = Object.values(dealerCardTwo)[2]
-  console.log(dealerCardTwo)
-  const dealerCardTwoSuit = Object.values(dealerCardTwo)[1]
-  dealerCard2Sum = dealerCardTwoNumber
-  dealerCard2Suit = dealerCardTwoSuit
-  console.log(deck)
-  dealerCards.push(dealerCard2Sum + dealerCard2Suit)
-  dealerHand.append("card: ", dealerCard2Sum, " of ", dealerCard2Suit, ". ")
-}
-
-const addFirstPlayerCard = () =>{
-  const playerCardOne = playerHandDraw();
-  const playerCardOneNumber = Object.values(playerCardOne)[2];
-  console.log(playerCardOne);
-  const playerCardOneSuit = Object.values(playerCardOne)[1];
-  playerCard1Sum = playerCardOneNumber
-  playerCard1Suit = playerCardOneSuit
-  console.log(deck)
-  playerCards.push(playerCard1Sum + playerCard1Suit)
-  playerHand.append("card: ", playerCard1Sum, " of ", playerCard1Suit, ". ")
-}
-const addSecondPlayerCard = () => {
-  const playerCardTwo = playerHandDraw();
-  const playerCardTwoNumber = Object.values(playerCardTwo)[2];
-  console.log(playerCardTwo);
-  const playerCardTwoSuit = Object.values(playerCardTwo)[1];
-  playerCard2Sum = playerCardTwoNumber
-  playerCard2Suit = playerCardTwoSuit
-  console.log(deck);
-  playerCards.push(playerCard2Sum + playerCard2Suit)
-  playerHand.append('card: ', playerCard2Sum, " of ", playerCard2Suit, ". ");
-}
+const addDealerCard = () => {
+  const card = cardDraw();
+  dealerCards.push(card);
+  renderCard(card, dealerHand);
+};
 
 const renderCard = (card, targetElement) =>{
-  const img = document.createElement("img")
-  img.src = "./images/" + card.rank + "_of_" + card.suit + ".png"
-  targetElement.append(img)
+  const img = document.createElement('img');
+  img.src = `./images/${card.rank}_of_${card.suit}.png`;
+  targetElement.append(img);
 }
 
 
-const sumOfcards = (targetCards) =>{
-  let sum = 0
-  for (let card of targetCards){
-    sum += card.value.primary
+
+const checkForBust = (sum, targetCards) => {
+  if (sum > 21) {
+    for (let card of targetCards) {
+      if (card.rank === 1) {
+        sum -= 10;
+        console.log(sum);
+        return sum;
+      }
+    }
   }
-  return sum
+  return sum;
+};
+
+const sumOfcards = (targetCards) =>{
+    let sum = 0;
+    for (let card of targetCards) {
+      sum += card.value.primary;
+    }
+    return checkForBust(sum, targetCards);
 }
 
 const renderDealerSum = () =>{
   const dealerCardSum = sumOfcards(dealerCards)
-  dealerPoints.innerHTML = null
+  dealerPoints.innerText = null
   dealerPoints.append(dealerCardSum)
 }
 
 const renderPlayerSum = () =>{
   const playerCardSum = sumOfcards(playerCards)
+  playerPoints.innerHTML = null
+  playerPoints.append(playerCardSum)
 }
 
-
-
-
-
-
-
-
-
-const gameStart = () => {
-  dealerHand.innerHTML = null
-  playerHand.innerHTML = null
-  addFirstDealerCard()
-  addFirstPlayerCard()
-  addSecondDealerCard()
-  addSecondPlayerCard()
-  console.log("dealer", dealerCards)
-  console.log("player", playerCards)
-}
-
-const inGame = () =>{
+const restartGame = () =>{
   deck = []
   dealerCards = []
   playerCards = []
+  dealerPoints.innerHTML = null
+  playerPoints.innerHTML = null
+  dealerHand.innerHTML = null
+  playerHand.innerHTML = null
+  dealBtn.removeAttribute('disabled', 'disabled')
 }
 
-
-
-
-const restartGame = () =>{
-  setTimeout(inGame, 2000)
-  setTimeout(createCard)
+const restartGameFunction = () =>{
+  setTimeout(restartGame, 2000)
+  setTimeout(createAdeck, 2000)
 }
-
-
+createAdeck()
 
 dealBtn.onclick = () =>{
-  dealBtn.setAttribute("disabled", "disabled")
-  gameStart();
-  console.log(dealerCards)
-  console.log(playerCards)
+  // dealBtn.setAttribute("disabled", "disabled")
+  dealBtn.setAttribute
+  addPlayerCard()
+  renderPlayerSum()
+  addDealerCard()
+  renderDealerSum()
+  // console.log(dealerCards)
+  // console.log(playerCards)
+  if (sumOfcards(playerCards) >= 21){
+    alert("You Lost!")
+    restartGameFunction()
+  }
+  if (sumOfcards(dealerCards) >= 21){
+    alert("You Won!")
+    restartGameFunction()
+  }
 }
 
 hitBtn.onclick = () =>{
-  addFirstPlayerCard()
-  console.log(playerCards)
+  addPlayerCard()
+  renderPlayerSum()
+  // console.log(playerCards)
+  if(sumOfcards(playerCards) >= 21){
+    alert("You Lost!")
+    restartGameFunction()
+  }
 }
 
 standBtn.onclick = () =>{
-
+    while (sumCards(dealerCards) < 18) {
+      addDealerCard();
+      renderDealerSums();
+      alert('You Lost!');
+    }
+    restartGameFunction();
 }
+
 
 
 

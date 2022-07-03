@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
   // Execute after page load
   alert("Welcome to BlackJack! Made by Rahmin Shoukoohi")
-  alert("You should probably know that I ripped my hari out making this..")
+  alert("You should probably know that I ripped my hair out making this..")
   alert("But I do hope you enjoy :) ")
-  alert("The game might be a little buggy.. So sorry in advance! I will fix it all :3")
+  alert("The game might be a little buggy.. So sorry in advance! I will fix it all very soon :3")
 })
 
 

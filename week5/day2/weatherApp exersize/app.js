@@ -1,6 +1,6 @@
 console.log('howdy');
 
-const API_KEY = 'ff1cadec65d9f10c3aafc2a01b14612c';
+const API_KEY = '441d6e2a850584f1aa118ebf48addd9f';
 const container = document.getElementById("container")
 const weatherContents = document.getElementById('weather-content');
 const searchButton = document.getElementById('btn');

@@ -151,7 +151,7 @@ hitBtn.onclick = () =>{
 }
 
 standBtn.onclick = () =>{
-    while (sumCards(dealerCards) < 18) {
+    while (sumOfcards(dealerCards) < 18) {
       addDealerCard();
       renderDealerSums();
       alert('You Lost!');

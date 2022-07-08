@@ -2,6 +2,8 @@ const newsUrl = `https://vlrggapi.herokuapp.com/news`;
 const newsArticles = document.getElementById('newsArticles');
 
 
+// try .innerText and see if that changes anything
+
 const news = async () =>{
     newsArticles.innerText = null
     const valNews = await fetch(newsUrl)

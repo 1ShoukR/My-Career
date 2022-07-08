@@ -4,6 +4,7 @@ const teamPages = document.getElementById('teamPages');
 
 
 const getTeam = async ()=>{
+    teamPages.innerHTML = null
     const inputField = document.getElementById('inputField').value
     const rankingsURL = `https://vlrggapi.herokuapp.com/rankings/${inputField}`;
     const stats = await fetch(rankingsURL)
@@ -16,7 +17,7 @@ const getTeam = async ()=>{
         const teamPage = document.createElement('p')
         const teamLogo = document.createElement('img')
         teamLogo.classList = 'teamLogo'
-        teamLogo.src = statsJson.data.logo
+        teamLogo.src = statsJson.data[index].logo
         teamPage.classList = 'teamPage'
         teamPages.append(teamPage, teamLogo)
         // need to fix something in this loop

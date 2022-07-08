@@ -19,11 +19,10 @@ const getTeam = async ()=>{
         teamLogo.src = statsJson.data.logo
         teamPage.classList = 'teamPage'
         teamPages.append(teamPage, teamLogo)
+        // need to fix something in this loop
         for (var item of Object.keys(statsJson.data[index])){
-            let contentSpace = ' '
-            teamPage.append(statsJson.data[index][item] + contentSpace, teamLogo)
+            teamPage.append(statsJson.data[index][item] + ' | ' )
         }
-        // teamPage.append(' ' + statsJson.data[index].team)
     }
 }
 searchButton.onclick = () =>  getTeam()

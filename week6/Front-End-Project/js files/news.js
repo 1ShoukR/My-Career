@@ -14,11 +14,8 @@ const news = async () =>{
         newArticle.classList = 'newArticle'
         newsArticles.append(newArticle)
         for (var item of Object.keys(newsJson.data.segments[index])){
-            var content = " "
-            if (item != "url_path"){
-                content += ' https://www.vlr.gg';
-            }
-            newArticle.append(newsJson.data.segments[index][item] + content)
+            var content = ' https://www.vlr.gg';
+            newArticle.append(newsJson.data.segments[index][item]  + "   |    ")
         }
     }
 }

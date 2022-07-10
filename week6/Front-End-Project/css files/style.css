@@ -1,0 +1,9 @@
+.teamLogo {
+    height: 17px;
+    width: 14px;
+}
+
+.teamRank { 
+    display: flex;
+    align-items: center;
+}

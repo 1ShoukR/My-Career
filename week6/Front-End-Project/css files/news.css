@@ -11,6 +11,7 @@ body {
 
 
 nav {
+  gap: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -31,7 +32,7 @@ nav span {
 }
 
 a {
-  gap: 10px;
+  gap: 20px;
   background-image: linear-gradient(
     to right,
     #54b3d6,
@@ -243,3 +244,4 @@ h3 {
   background-color: #de463b;
   color: #ffffff;
 }
+

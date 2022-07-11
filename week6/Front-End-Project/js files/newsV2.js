@@ -22,13 +22,17 @@ const news = async () => {
     date.classList = 'date'
     const author = document.createElement('p')
     author.classList = "author"
-    author.innerHTML = `${titleObj.author}`
-    date.innerHTML = `${titleObj.date} | `
-    newsTitle.innerHTML = `${titleObj.title} | `;
+    const vlrLink = document.createElement('a')
+    vlrLink.classList = 'vlrLink'
+    vlrLink.setAttribute('href', `vlr.gg`)
+    vlrLink.innerHTML = `https://www.vlr.gg${titleObj.url_path}`;
+    author.innerHTML = `This article was written and published by:  ${titleObj.author}`
+    date.innerHTML = `Date of publication: ${titleObj.date}  `
+    newsTitle.innerHTML = `${titleObj.title}  `;
     newsPage.innerHTML = `
-    ${titleObj.description} | 
+    ${titleObj.description}  
     `
-    newsArticles.append( newsPage, newsTitle, date, author);
+    newsArticles.append(newsTitle, newsPage, vlrLink, author, date);
   }
 };
 news();

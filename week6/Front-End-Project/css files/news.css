@@ -10,7 +10,7 @@ body {
 }
 
 
-nav {
+#nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,22 +20,49 @@ nav {
 }
 
 .logo {
-    height: 50px;
+    height: 20px;
     width: 50px;
 }
 
-.links{
-    color: #f6f6f6;
-    font-size: 15px;
-    padding: 8px;
+
+a {
+  gap: 10px;
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-.links:hover {
-    background-color: grey;
-    transition: .5s;
-    border-radius: 10px;
-
+a:before{
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
 }
+
+a:hover {
+ background-position: 0;
+}
+
+a:hover::before{
+  width: 100%;
+}
+
 
 #container {
     flex-wrap: wrap;
@@ -47,6 +74,7 @@ nav {
 
 
 h3 {
+    margin: 0;
     color: #f6f6f6;
     position: relative;
     line-height: 45px;

@@ -1,5 +1,5 @@
-const newsUrl = `https://vlrggapi.herokuapp.com/news`;
 const newsArticles = document.getElementById('newsArticles');
+const newsUrl = `https://vlrggapi.vercel.app/news`;
 
 const news = async () => {
   newsArticles.innerText = null;

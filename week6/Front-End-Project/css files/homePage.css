@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2F3337;
+}
+
+
+h1 {
+    position: relative;
+    line-height: 40px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 10px;
+}
+
+.container {
+    color: #EAF6F6;
+    flex-wrap: wrap;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vlrLogo {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+nav {
+    background-color: #363636;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    padding: 0 15px;
+    font-weight: 200;
+    position: relative;
+    border-radius: 20px;
+}
+
+nav span {
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.links{
+    color: #f6f6f6;
+    font-size: 20px;
+    padding: 2px 2px;
+}

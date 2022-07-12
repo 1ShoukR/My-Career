@@ -122,12 +122,12 @@ nav span {
 
 
 @media only screen and (min-width: 310px) and (max-width: 900px) {
-  #container{
-   width: 200%;
-   height: 100%;
- }
+    #container{
+    width: 200%;
+    height: 100%;
+    }
 
- h1 {
+    h1 {
     color: #f6f6f6;
     position: relative;
     line-height: 45px;
@@ -141,15 +141,15 @@ nav span {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 #matchPage {
-  padding: auto;
-  width: 100%;
+    padding: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
 }
 .matchArticles {
-  width: 100%;
+    width: 100%;
     border-top:1px solid #5B6167;
     border-bottom:1px solid #5B6167;
     border-left: 1px solid #5B6167;
@@ -167,7 +167,7 @@ nav span {
 nav {
     height: 70px;
     width: 100%;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 }

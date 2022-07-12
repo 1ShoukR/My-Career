@@ -7,5 +7,7 @@
       "path": "..\\side-projects"
     }
   ],
-  "settings": {}
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "My-Career"
+  }
 }

@@ -16,6 +16,7 @@ const getTeam = async () => {
     const teamPage = document.createElement('p');
     const teamLogo = document.createElement('img');
     teamLogo.classList = 'teamLogo';
+    teamLogo.setAttribute("alt", "team logo missing")
     teamLogo.src = teamObj.logo;
     teamPage.classList = 'teamPage';
     // teamLogo.setAttribute("height", "16px")
@@ -26,9 +27,10 @@ const getTeam = async () => {
     console.log("\t\t", teamObj.rank)
     const teamRank = document.createElement('p')
     teamRank.classList = 'teamRank'
-    teamRank.innerHTML = `Rank:  ${teamObj.rank} | Team: ${teamObj.team} | Country: ${teamObj.country} | Logo: ${teamLogo.outerHTML}`;
+    teamRank.innerHTML = `Rank:  ${teamObj.rank} | ${teamObj.team}  ${teamLogo.outerHTML} 
+    | Country: ${teamObj.country}  `;
     console.log(teamRank)
-    teamPages.append(teamPage, teamRank, );
+    teamPages.append(teamPage, teamRank);
   }
 };
 searchButton.onclick = () => getTeam();

@@ -27,7 +27,7 @@ h1 {
     color: #f6f6f6;
     position: relative;
     line-height: 45px;
-    padding: 0 15rem;
+    padding: 0 12rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -115,6 +115,59 @@ nav span {
     background: #40474F;
     height: auto;
     color: #f6f6f6;
-    font-size: 3.8vh;
+    font-size: 3vh;
     font-weight: 500;
+}
+
+
+
+@media only screen and (min-width: 310px) and (max-width: 900px) {
+  #container{
+   width: 200%;
+   height: 100%;
+ }
+
+ h1 {
+    color: #f6f6f6;
+    position: relative;
+    line-height: 45px;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+#matchPage {
+  padding: auto;
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.matchArticles {
+  width: 100%;
+    border-top:1px solid #5B6167;
+    border-bottom:1px solid #5B6167;
+    border-left: 1px solid #5B6167;
+    border-right: 1px solid #5B6167;
+    background: #40474F;
+    height: auto;
+    color: #f6f6f6;
+    font-size: 3vh;
+    font-weight: 500;
+}
+.logo {
+    height: 70px;
+    width: auto;
+}
+nav {
+    height: 70px;
+    width: 100%;
+    font-size: 28px;
+}
+
 }

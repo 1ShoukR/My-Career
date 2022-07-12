@@ -22,21 +22,21 @@ body {
 }
 
 
-h1 {
-    margin: 0;
-    color: #f6f6f6;
-    position: relative;
-    line-height: 45px;
-    padding: 0 15rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: auto;
-    width: auto;
-    align-items: flex-end;
-    background-color: #363636;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+h3 {
+  margin: 0;
+  color: #f6f6f6;
+  position: relative;
+  line-height: 45px;
+  padding: 0 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  align-items: flex-end;
+  background-color: #363636;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 nav {
@@ -55,7 +55,7 @@ nav span {
     flex-direction: row;
 }
 
-a {
+a.links {
     background-image: linear-gradient(
     to right,
     #54b3d6,
@@ -72,7 +72,7 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-a:before{
+a.links:before{
     content: '';
     background: #54b3d6;
     display: block;
@@ -84,11 +84,11 @@ a:before{
     transition: all 0.3s ease-in-out;
 }
 
-a:hover {
+a.links:hover {
     background-position: 0;
 }
 
-a:hover::before{
+a.links:hover::before{
     width: 100%;
 }
 
@@ -108,17 +108,51 @@ input {
 }
 
 button {
-    border-radius: 20px;
-    font-size: 15px;
-    cursor: pointer;
-	border-bottom-left-radius: 0;
+display: inline-block;
+  padding: .25rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken(#0cf, 15%);
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0cf;
+    border-radius: 10rem;
+    z-index: -2;
 }
 
 button:hover {
-    border-radius: 0px;
-    transition: all 0.3s;
-    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    animation: 5s linear infinite alternate;
+  cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+button:hover::before{
+  width: 100%;
 }
 
 #statsPage {
@@ -140,7 +174,7 @@ button:hover {
     background: #40474F;
     height: auto;
     color: #f6f6f6;
-    font-size: 3.8vh;
+    font-size: 3vh;
     font-weight: 500;
 }
 
@@ -248,4 +282,47 @@ button:hover {
 .wrapper .youtube:hover .tooltip::before {
   background-color: #de463b;
   color: #ffffff;
+}
+
+
+@media only screen and (min-width: 310px) and (max-width: 840px) {
+  .container{
+   width: 200%;
+   height: 100%;
+ }
+
+ h1 {
+    color: #f6f6f6;
+    position: relative;
+    line-height: 45px;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+#statsPage {
+  padding: auto;
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.valPlayers {
+  width: 100%;
+    border-top:1px solid #5B6167;
+    border-bottom:1px solid #5B6167;
+    border-left: 1px solid #5B6167;
+    border-right: 1px solid #5B6167;
+    background: #40474F;
+    height: auto;
+    color: #f6f6f6;
+    font-size: 3vh;
+    font-weight: 500;
+}
+
 }

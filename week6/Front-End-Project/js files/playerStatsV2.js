@@ -6,7 +6,7 @@ console.log(inputField.value);
 
 const getPlayerStats = async () => {
   const inputField = document.getElementById('inputField').value;
-  const statsURL = `https://vlrggapi.herokuapp.com/stats/${inputField}`;
+  const statsURL = `https://vlrggapi.vercel.app/stats/${inputField}/30`;
   const stats = await fetch(statsURL);
   const statsJson = await stats.json();
   console.log(statsJson);
@@ -21,7 +21,8 @@ const getPlayerStats = async () => {
     console.log('\t\t', playersObj.player);
     const valPlayers = document.createElement('p')
     valPlayers.classList = 'valPlayers'
-    valPlayers.innerHTML = 
+    valPlayers.innerHTML =
+    // make a table using the table tag. figure it out later.
         `
             Player: ${playersObj.player} 
             | Org: ${playersObj.org} 

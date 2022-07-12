@@ -40,11 +40,12 @@ h1 {
 }
 
 nav {
+    gap: 20px;
     display: flex;
     flex-wrap: wrap;
-    line-height: 40px;
+    justify-content: center;
+    align-items: center;
     font-weight: 200;
-    position: relative;
     border-radius: 20px;
 }
 

@@ -37,7 +37,7 @@ nav span {
     to right,
     #54b3d6,
     #54b3d6 50%,
-    #000 50%
+    rgb(255, 255, 255) 50%
   );
   background-size: 200% 100%;
   background-position: -100%;

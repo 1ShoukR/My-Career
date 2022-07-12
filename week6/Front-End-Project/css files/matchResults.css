@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2F3337;
+    font-weight: 300;
+}
+
+#container {
+    color: #EAF6F6;
+    flex-wrap: wrap;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    margin: 40px;
+    color: #f6f6f6;
+    position: relative;
+    line-height: 45px;
+    padding: 0 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 40px;
+    font-weight: 200;
+    position: relative;
+    border-radius: 20px;
+}
+
+nav span {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+
+.links {
+    background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    rgb(255, 255, 255) 50%
+    );
+    background-size: 202% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.links:before{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.links:hover {
+    background-position: 0;
+}
+
+.links:hover::before{
+    width: 100%;
+}
+
+#matchPage {
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.matchArticles {
+    border-top:1px solid #5B6167;
+    border-bottom:1px solid #5B6167;
+    border-left: 1px solid #5B6167;
+    border-right: 1px solid #5B6167;
+    margin: 0;
+    background: #40474F;
+    height: auto;
+    color: #f6f6f6;
+    font-size: 3.8vh;
+    font-weight: 500;
+}

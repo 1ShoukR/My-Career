@@ -19,7 +19,7 @@ const getMatchResults = async () => {
     console.log("\t\t", Object.keys(resultsObj.team1))
     console.log("\t\t", resultsObj.team1)
     newMatch.innerHTML = `
-    ${resultsObj.tournament_name}
+    ${resultsObj.tournament_name} | 
     ${resultsObj.team1}: 
     ${resultsObj.score1} | 
     ${resultsObj.team2}: 

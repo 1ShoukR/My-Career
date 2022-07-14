@@ -19,7 +19,9 @@ body {
     align-items: center;
 }
 
-h3 {
+
+.header1 {
+  font-weight: bold;
   margin: 0;
   color: #f6f6f6;
   position: relative;
@@ -34,6 +36,11 @@ h3 {
   background-color: #363636;
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header2 {
+  font-size: 15px;
+  margin: 20px;
 }
 
 nav {
@@ -250,4 +257,41 @@ input {
 .wrapper .youtube:hover .tooltip::before {
   background-color: #de463b;
   color: #ffffff;
+}
+
+@media (max-width: 768px){
+    nav {
+  text-align: center;
+  width: 100%;
+  font-size: 10px;
+}
+
+.header1{
+  text-align: center;
+  padding: 0 4rem;;
+  font-size: 25px;
+  font-weight: 600;
+  width: 80%;
+}
+
+.header2{
+  margin: 20px;
+  text-align: center;
+  font-size: 10px;
+  width: 70%;
+}
+
+.wrapper .icon{
+  width: 0px;
+  font-size: 20px;
+  margin: 32px;
+}
+
+.teamPages {
+  width: fit-content;
+}
+
+.teamRank{
+width: 100%;
+}
 }

@@ -22,7 +22,8 @@ body {
 }
 
 
-h1 {
+#header {
+    font-weight: bold;
     margin: 40px;
     color: #f6f6f6;
     position: relative;
@@ -50,7 +51,6 @@ nav {
 }
 
 nav span {
-    gap: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -120,54 +120,138 @@ nav span {
 }
 
 
+.wrapper {
+  display: inline-flex;
+}
 
-@media only screen and (min-width: 310px) and (max-width: 900px) {
-    #container{
-    width: 200%;
-    height: 100%;
-    }
+.wrapper .icon {
+  position: relative;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 54px;
+  width: 10px;
+  height: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 
-    h1 {
-    color: #f6f6f6;
-    position: relative;
-    line-height: 45px;
-    padding: .5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: #363636;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-#matchPage {
-    padding: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.matchArticles {
-    width: 100%;
-    border-top:1px solid #5B6167;
-    border-bottom:1px solid #5B6167;
-    border-left: 1px solid #5B6167;
-    border-right: 1px solid #5B6167;
-    background: #40474F;
-    height: auto;
-    color: #f6f6f6;
-    font-size: 3vh;
-    font-weight: 500;
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
-.logo {
-    height: 70px;
-    width: auto;
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover {
+  background-image: linear-gradient(to bottom right, #dd2a7b, #f58529);
+}
+
+.wrapper .instagram:hover .fa-instagram::before {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+
+
+
+@media (max-width: 768px) {
 nav {
+    text-align: center;
     height: 70px;
     width: 100%;
-    font-size: 26px;
+    font-size: 20px;
+}
+
+#header {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+}
+
+p.matchArticles{
+    font-size: 1.9vh;
+}
+
+#matchPage {
+    font-size: 4vh;
+}
+
+.wrapper .icon{
+  width: 0px;
+  font-size: 20px;
+  margin: 25px;
 }
 
 }

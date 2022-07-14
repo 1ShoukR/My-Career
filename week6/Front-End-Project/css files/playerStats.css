@@ -21,8 +21,12 @@ body {
     align-items: center;
 }
 
+.headers {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-h3 {
+.header1 {
   margin: 0;
   color: #f6f6f6;
   position: relative;
@@ -38,6 +42,13 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
+
+.header2 {
+  font-size: 15px;
+  margin: 20px;
+}
+
+
 
 nav {
     gap: 20px;
@@ -270,44 +281,50 @@ input {
 
 
 
-@media only screen and (min-width: 310px) and (max-width: 840px) {
-  .container{
-   width: 200%;
-   height: 100%;
- }
+@media (max-width: 768px) {
 
- h1 {
-    color: #f6f6f6;
-    position: relative;
-    line-height: 45px;
-    padding: .5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: #363636;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-}
-#statsPage {
-  padding: auto;
+
+
+  nav {
+  text-align: center;
   width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
+  margin-left: 10px;
+  font-size: 10px;
 }
-.valPlayers {
-  width: 100%;
-    border-top:1px solid #5B6167;
-    border-bottom:1px solid #5B6167;
-    border-left: 1px solid #5B6167;
-    border-right: 1px solid #5B6167;
-    background: #40474F;
-    height: auto;
-    color: #f6f6f6;
-    font-size: 3vh;
-    font-weight: 500;
+
+.header2 {
+  margin: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.header1 {
+  padding: 0 2em;;
+}
+.headers {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding: 0;
+  width: 60%;
+}
+
+#statsPage{
+  align-items: center;
+}
+
+.valPlayers{
+  text-align: center;
+  padding: 0 8rem;
+  font-size: 20px;
+  font-weight: 600;
+  width: 60%;
+}
+
+.wrapper .icon{
+  width: 0px;
+  font-size: 20px;
+  margin: 32px;
 }
 
 }

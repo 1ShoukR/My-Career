@@ -80,6 +80,7 @@ a:hover::before{
 
 
 #newsHeading {
+  font-weight: bold;
   margin: 0;
   color: #f6f6f6;
   position: relative;
@@ -261,11 +262,11 @@ a.vlrLink {
 
 @media (max-width: 768px){
   #container{
+    flex-direction: row;
   }
   nav {
   text-align: center;
-  width: 100%;
-  margin-left: 30px;
+  width: auto;
   font-size: 10px;
 }
 
@@ -324,3 +325,23 @@ p.author{
 
 }
 
+@media (max-width: 500px) {
+  #container {
+    margin: 0;
+    flex-direction: row;
+    width: 500px
+  }
+
+
+  .newsTitle{
+  width: 550px;
+  text-align: center;
+  font-size: 15px;
+  margin: 10px;
+}
+
+
+.newsPage{
+  font-size: 13px;
+}
+}

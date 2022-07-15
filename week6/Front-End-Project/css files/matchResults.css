@@ -255,3 +255,17 @@ p.matchArticles{
 }
 
 }
+
+@media (max-width: 500px){
+  #container {
+  flex-direction: row;
+  }
+  .wrapper .icon{
+  width: 0px;
+  font-size: 20px;
+  margin: 5px;
+  right: 15px;
+}
+
+
+}

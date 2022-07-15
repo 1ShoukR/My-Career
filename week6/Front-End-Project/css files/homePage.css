@@ -284,7 +284,37 @@ nav {
 @media (max-width: 500px) {
 .container {
   flex-direction: row;
+  margin: 0px;
 }
 
+.wrapper .icon{
+  width: 0px;
+  font-size: 15px;
+  margin:35px;
+  padding: 0px;
+  width: 30%;
+}
+
+p.para{
+  left: 80px;
+  font-size: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.wrapper .icon{
+  width: 0px;
+  font-size: 20px;
+  margin: 30px;
+  right: 20px;
+}
+
+nav span{
+  font-size: 15px;
+  width: auto;
+}
+
+input {
+  padding: 0px;
+}
 
 }

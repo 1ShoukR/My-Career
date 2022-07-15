@@ -27,6 +27,7 @@ body {
 }
 
 .header1 {
+  font-weight: bold;
   margin: 0;
   color: #f6f6f6;
   position: relative;
@@ -327,4 +328,20 @@ input {
   margin: 32px;
 }
 
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: row;
+  }
+  .valPlayers {
+    padding: 20px;
+  }
+.wrapper .icon{
+  width: 0px;
+  font-size: 20px;
+  margin: 5px;
+  right: 15px;
+}
+  
 }

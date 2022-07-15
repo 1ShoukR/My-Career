@@ -246,10 +246,10 @@ nav {
 
   .schedMatches{
   text-align: center;
-  padding: 0 4rem;;
+  padding: 0 0rem;;
   font-size: 20px;
   font-weight: 600;
-  width: 80%;
+  width: auto;
   }
 
   .wrapper .icon{
@@ -259,4 +259,25 @@ nav {
 }
 
 
+}
+
+@media (max-width: 500px) {
+  .container {
+  flex-direction: row;
+  }
+
+  .wrapper .icon{
+  width: 0px;
+  font-size: 20px;
+  margin: 5px;
+  right: 15px;
+}
+
+#header {
+  width: auto;
+}
+
+.schedMatches{
+  width: auto;
+}
 }

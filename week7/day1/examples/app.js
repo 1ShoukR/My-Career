@@ -47,22 +47,22 @@ app.listen(PORT, console.log(`Listening on port ${PORT}`))
 
 app.get("/animal", (req,res) =>{
 res.send(
-  cowsay.say({
+    cowsay.say({
     text: "I'm a moooodule",
     e: 'oO',
     T: 'U ',
-  })
+    })
 );
 })
 
 
 app.post("/animal", (req,res) => {
     res.send(
-      cowsay.say({
+        cowsay.say({
         text: "I'm a moooodule from POST",
         e: 'oO',
         T: 'U ',
-      })
+        })
     );
 })
 

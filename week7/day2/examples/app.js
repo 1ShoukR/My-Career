@@ -8,11 +8,21 @@ const PORT = 3001
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
+// this line lets us use local pathing for our html and css
+app.use(express.static("public"))
 
+
+//
+console.log("I am on the server")
 // routes
 app.get("/", (req, res) => {
     // res.send("Hello from Express!")
-    res.render('home')
+    const user = {name: "Rahmin"}
+    res.render('home', {locals:
+        {user: user,
+        teacher: "Joe",
+        students: ["Amanda", "Carlos"]
+    }})
 })
 
 

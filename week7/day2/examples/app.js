@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 
 
 app.post('/home', (req, res) => {
-  res.send('Hello from Express!');
+  res.json(req.body.message);
 });
 
 app.get("/firstPage", (req, res) => {

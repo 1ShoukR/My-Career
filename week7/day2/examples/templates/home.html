@@ -10,10 +10,15 @@
 </head>
 <body>
     <div>
-        <h1>Howdy</h1>${user.name}
+        <h1>Howdy</h1>
+        <p>${user.name}</p>
         <p>Our teacher's name is ${teacher}</p>
         <p>We have two students in our class and their names are:</p>
-        <div> ${students.map(students => ` <h2>${students}</h2>`).join('')}</div>
+        <div>
+            ${students.map(students => ` 
+                <h2>${students}</h2>
+                `).join('')}
+        </div>
     </div>
     <div>
         <input id="input" type="text">

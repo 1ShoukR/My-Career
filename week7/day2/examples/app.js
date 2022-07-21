@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 
 app.post('/home', (req, res) => {
     console.log(req.body.message)
-  res.json(req.body.message);
+  res.send("nice message");
 });
 
 app.get("/firstPage", (req, res) => {

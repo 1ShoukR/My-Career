@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE',
       });
       review.belongsTo(models.Restaurants, {
-        foreignKey: 'restaurantId',
+        foreignKey: 'restaurantID',
         onDelete: 'CASCADE',
       });
     }

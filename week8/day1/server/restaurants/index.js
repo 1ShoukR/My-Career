@@ -18,7 +18,7 @@ const router = express.Router();
 
 
 // create a restaurant
-router.post("/findrestaurants", async (req, res) => {
+router.post("/create_restaurant", async (req, res) => {
     const {name, address, reviewScore } = req.body
     const createARestaurant = {
         name,

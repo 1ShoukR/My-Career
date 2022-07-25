@@ -3,26 +3,31 @@
 // create a user is in the 'user' folder
 
 const express = require('express');
-const { user } = require('../database/models');
 const app = express();
-const bcrypt = require('bcrypt');
 const PORT = 3008;
+const userRoutes = require("./user")
+const es6Renderer = require("express-es6-template-engine")
+const restaurantsRoutes = require('./restaurants');
+const { user } = require('../database/models');
+const bcrypt = require('bcrypt');
 const router = express.Router()
 
-const userRoutes = require("./user")
 
 // middleware
+app.use(express.static("public"))
+app.engine("html", es6Renderer)
+app.set("views", "./public/views")
+app.set("view engine", "html")
+
 app.use(express.json());
-// request object
-// req.body as long as you have the above middleware
-// {
-// "username": "joeissmort"
-// "Password": "notreally"
-// }
-// req.body.password -> "notreally"
-
-
 app.use("/users", userRoutes)
+app.use("/restaurants", restaurantsRoutes)
+
+
+app.get("/", function (req, res) {
+    res.render("views")
+})
+
 
 
 // create a user name and password

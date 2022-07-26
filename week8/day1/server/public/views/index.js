@@ -2,9 +2,14 @@ const submit = document.getElementById('submit');
 console.log("hello world")
 
 const sendData = async () => {
-    const input = document.getElementById('name').value;
+
+    const nameInput = document.getElementById('name').value;
+    const addressInput = document.getElementById('address').value
+    const reviewInput = document.getElementById('review').value;
     const data = {
-    name: input,
+      name: nameInput,
+      address: addressInput,
+      reviewScore: reviewInput,
     };
     const dataWeAreSending = await fetch(
       'http://localhost:3008/restaurants/create_restaurant',
@@ -20,5 +25,4 @@ const sendData = async () => {
     const json = await dataWeAreSending.json();
     console.log(json);
 };
-
 submit.onclick = () => sendData();

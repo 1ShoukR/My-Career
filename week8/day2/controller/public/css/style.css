@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

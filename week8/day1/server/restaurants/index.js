@@ -108,7 +108,25 @@ router.delete('/delete_name', async (req, res) => {
             id: id
         }
     })
-    restaurantsToGet.destroy()
+    restaurantsToGet.destroy({
+        name: name,
+        updatedAt: new Date()
+    })
+    res.send(restaurantsToGet);
+})
+
+//delete by Id
+router.delete('delete_id/:id', async (req, res) => {
+    const { id } = req.body
+    const restaurantsToGet = await Restaurants.findOne({
+        where: {
+            id: id,
+        }
+    })
+    restaurantsToGet.destroy({
+        id: id,
+    });
+    res.send(restaurantsToGet)
 })
 
 

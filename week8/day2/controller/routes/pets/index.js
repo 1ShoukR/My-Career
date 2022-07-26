@@ -1,9 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const { Pets } = require('../../../sequelize/models/')
 
 // read
-router.get('/get_pets', (req, res) => {
-    res.render("index.html")
+router.get('/get_pets', async (req, res) => {
+    const petToGet = await Pets.findAll()
+    console.log(petToGet)
+    res.render("index.html", {locals:{
+        title: ["Blake", "Ethan", "west", "Stacy"],
+        Pets: petToGet
+}})
 })
 
 //create

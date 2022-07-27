@@ -9,6 +9,9 @@
 <body>
     <div>
         <h1>Here are the owners!</h1>
+        ${owners.map(owners => `
+            <h2>${owners.dataValues.PetOwner}</h2>`
+            ).join('')}
     </div>
 </body>
 </html>

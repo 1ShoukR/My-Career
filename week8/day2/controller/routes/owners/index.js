@@ -4,14 +4,12 @@ const { Owners } = require('../../../sequelize/models');
 
 
 router.get('/get_owners', async (req, res) => {
-  const ownersToGet = await Owners.findAll();
-  console.log();
-  res.render('owners.html', {
-    locals: {
-      title: ['Blake', 'Ethan', 'west', 'Stacy'],
-      owners: ownersToGet,
+    const ownersToGet = await Owners.findAll();
+    console.log(ownersToGet);
+    res.render('owners.html', {locals: {
+        owners: ownersToGet,
     },
-  });
+    });
 });
 
 

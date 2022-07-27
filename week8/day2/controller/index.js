@@ -13,7 +13,7 @@ app.set('view engine', 'html');
 app.use(express.json())
 app.use(cors())
 app.use("/pets", petRoutes)
-app.use('/owners', ownerRoutes)
+app.use('/pets', ownerRoutes)
 
 
 

@@ -23,11 +23,32 @@ function App() {
   // const [counter, setCounter] = useState(0);
   // const [mood, setMood] = useState(false)
   const [toDoList, setToDoList] = useState([])
+  const [toDoItem, setToDoItem] = useState("")
+
+
+
+const addToDo = () =>{
+  setToDoList([...toDoList, toDoItem])
+  setToDoItem("")
+}
+
+const deleteToDo = (item) => {
+  const filterToDoList = toDoList.filter((toDoList) => toDoList !== item);
+  console.log(filterToDoList)
+}
+
+
   return (
     <div className="App">
       <h1>To Do list</h1>
-      <input type="text"></input>
-      <button>Submit</button>
+      <input value={toDoItem} onChange={(e) => setToDoItem(e.target.value)} type="text"></input>
+      <button onClick={addToDo}>Submit</button>
+      {toDoList.map((toDoList, i) =>(
+        <>
+        <p>{toDoList} </p>
+        <button onClick ={() => deleteToDo(toDoList)}>x</button>
+        </>
+      ))}
       {/* <h1>To Do List</h1>
       <li>
         {toDoList ? 'done' : 'cookies'}

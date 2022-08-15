@@ -1,79 +1,66 @@
 
-import './App.css';
-import {useState} from "react"
-import {students, TAs} from "./dummyData"
-import Header from './Header';
-import Footer from './Footer';
-import Menu from './Menu';
-import MenuItems from './MenuItems';
-import Content from './Content';
-import Ad from './Ad';
-import ToDoHeader from './ToDoHeader';
-import ToDoItems from './ToDoItems';
-
-// hook
-// used to change state in functional components
+import "./App.css";
+import { useState } from "react";
+import { students, tas } from "./dummydata";
+import Header from "./Header";
+import Footer from "./Footer";
+// hooks
+// to change state in functional components
 function App() {
   // this is the syntax to create a useState hook
-  // const [stateVariable, functionToChangeStateVariable] = useState() (defaultValue for state)
-  // const [student, setStudent]
+  // const [stateVariable, functionToChangeTheStateVariable] = useState(defaultValue for state)
   // const [students, setStudents] = useState([])
   // const [userData, setUserData] = useState({})
-  // const [loading, setLoading] = useState(false)
-  // const [counter, setCounter] = useState(0);
-  // const [mood, setMood] = useState(false)
-  const [toDoList, setToDoList] = useState([])
-  const [toDoItem, setToDoItem] = useState("")
+  // const [loading,setLoading] = useState(false)
+  const [counter, setCounter] = useState(0);
+  const [mood, setMood] = useState(false);
+  const [todo, setTodo] = useState([]);
+  const [todoItem, setTodoItem] = useState("");
 
+  const addTodo = () => {
+    setTodo([...todo, todoItem]);
+    setTodoItem("");
+  };
 
-
-const addToDo = () =>{
-  setToDoList([...toDoList, toDoItem])
-  setToDoItem("")
-}
-
-const deleteToDo = (item) => {
-  const filterToDoList = toDoList.filter((toDoList) => toDoList !== item);
-  console.log(filterToDoList)
-}
-
+  const deleteTodo = (item) => {
+    const filtereditemList = todo.filter((todo) => todo !== item);
+    setTodo(filtereditemList);
+  };
 
   return (
     <div className="App">
-      <h1>To Do list</h1>
-      <input value={toDoItem} onChange={(e) => setToDoItem(e.target.value)} type="text"></input>
-      <button onClick={addToDo}>Submit</button>
-      {toDoList.map((toDoList, i) =>(
+      <Header />
+      <Footer />
+      {/* <h1>Counter {counter}</h1>
+      <button onClick={() => setCounter(() => counter + 1)}>+</button>
+      <button onClick={() => setCounter(() => counter - 1)}>-</button>
+      <h1>How are you feeling today?</h1>
+      <h1>{mood ? "🥲" : "🙁"}</h1>
+      <button onClick={() => setMood(!mood)}>Change Mood</button> */}
+      {/* <Header /> */}
+      {/* <Footer /> */}
+      <h1>Add todo item</h1>
+      <input
+        value={todoItem}
+        onChange={(e) => setTodoItem(e.target.value)}
+        type="text"
+      />
+      <button onClick={() => addTodo()}>Submit</button>
+      {todo.map((todo) => (
         <>
-        <p>{toDoList} </p>
-        <button onClick ={() => deleteToDo(toDoList)}>x</button>
+          <p>{todo}</p>
+          <button onClick={() => deleteTodo(todo)}>x</button>
         </>
       ))}
-      {/* <h1>To Do List</h1>
-      <li>
-        {toDoList ? 'done' : 'cookies'}
-        {toDoList ? 'done' : 'React'}
-        <button onClick = {() => setToDoList(!toDoList)}>Click if Finished</button>
-      </li> */}
-      {/* <Header/>
-      <Footer/>
-      <Menu/>
-      <Ad/>
-      <MenuItems/>
-      <MenuItems/>
-      <MenuItems/>
-      <MenuItems/>
-      <MenuItems/>
-      <Content/> */}
-      {/* <h1>Counter {counter}</h1>
-      <button onClick ={() => setCounter(() => counter + 1) }>+</button>
-      <button onClick ={() => setCounter(() => counter - 1) }>-</button>
-
-      <h1>How are you feeling today?</h1>
-      <h1>{mood ? "smiling face with tear" : "sightly frowning"}</h1>
-      <button onClick = {() => setMood(!mood)}>Change Mood</button> */}
     </div>
   );
 }
 
 export default App;
+
+/* <h1>Counter {counter}</h1>
+      <button onClick={() => setCounter(() => counter + 1)}>+</button>
+      <button onClick={() => setCounter(() => counter - 1)}>-</button>
+      <h1>How are you feeling today?</h1>
+      <h1>{mood ? "🥲" : "🙁"}</h1>
+      <button onClick={() => setMood(!mood)}>Change Mood</button> */

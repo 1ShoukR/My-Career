@@ -1,0 +1,27 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.outsideLinks{
+  display: flex;
+  gap: 40px;
+}
+
+.inputForms {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  padding: 5px;
+}
+
+.formButton {
+  display: flex;
+  flex-direction: column;
+}

@@ -30,7 +30,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Footer />
       {/* <h1>Counter {counter}</h1>
       <button onClick={() => setCounter(() => counter + 1)}>+</button>
       <button onClick={() => setCounter(() => counter - 1)}>-</button>
@@ -52,6 +51,7 @@ function App() {
           <button onClick={() => deleteTodo(todo)}>x</button>
         </>
       ))}
+      <Footer />
     </div>
   );
 }

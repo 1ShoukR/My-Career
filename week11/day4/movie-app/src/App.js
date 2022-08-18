@@ -50,7 +50,6 @@ function App() {
   const [movie, setMovie] = useState(fakeAPI)
   return (
     <div className="App">
-      
       <h1>Welcome to my Movie App</h1>
       <h2>This is a movie app created by Rahmin Shoukoohi</h2>
       <MovieContainer />

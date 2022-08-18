@@ -11,11 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Navbar />
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/about" element={<div>Why you do dis to us, Joe..</div>} />
-      <Route path="/details" element={<SpecificMovie />} />
-    </Routes>
+    <App/>
   </BrowserRouter>
 );
 

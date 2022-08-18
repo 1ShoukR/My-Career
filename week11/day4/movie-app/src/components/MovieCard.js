@@ -9,7 +9,7 @@ export const MovieCard = (props) => {
     // console.log(props.movie)
 //   console.log(props.movies.Title)
     return (
-        <Link to={`details`} >
+        <Link to={"/details"} >
         <div>
             {/* {props.movies.map(movie =>{
             return(
@@ -20,7 +20,7 @@ export const MovieCard = (props) => {
             <p>{props.movie.Title}</p>
             <img
             src={props.movie.Poster}
-            onClick={() => {}}
+            onClick={() => props.setSelectedMovie(props.movie)}
             alt="No Picture available"
             />
             <p>{props.movie.Year}</p>

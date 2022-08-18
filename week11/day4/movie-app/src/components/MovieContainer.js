@@ -46,7 +46,7 @@ export const MovieContainer = (props) => {
           </form>
           {/* <MovieCard movies={movies}/> */}
           {movies.map((movie) => (
-            <MovieCard key={movie.imdbID} movie={movie} />
+            <MovieCard key={movie.imdbID} movie={movie} setSelectedMovie={props.setSelectedMovie} />
           ))}
         </div>
       </>

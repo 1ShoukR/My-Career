@@ -11,6 +11,8 @@ export default function SpecificMovie(props) {
     return (
     <div>
         <h2>Movie Details</h2>
+        <h1>{props.setRahminMovie.Title}</h1>
+        <img src={props.setRahminMovie.Poster} alt="" srcset="" />
     </div>
     )
 }

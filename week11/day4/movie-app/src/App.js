@@ -48,11 +48,21 @@ function App() {
     Response: 'True',
   };
   const [movie, setMovie] = useState(fakeAPI)
+  const[setRahminMovie,setSelectedMovie] = useState({})
   return (
     <div className="App">
       <h1>Welcome to my Movie App</h1>
       <h2>This is a movie app created by Rahmin Shoukoohi</h2>
-      <MovieContainer />
+      <MovieContainer setSelectedMovie={setSelectedMovie} />
+      <Routes>
+       
+        <Route path="/about" element={<div>Why you do dis to us, Joe..</div>} />
+        
+        <Route
+          path="/details"
+          element={<SpecificMovie setRahminMovie={setRahminMovie} />}
+        ></Route>
+      </Routes>
     </div>
   );
 }

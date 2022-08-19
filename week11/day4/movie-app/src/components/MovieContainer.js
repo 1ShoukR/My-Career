@@ -17,7 +17,6 @@ export const MovieContainer = (props) => {
         e.preventDefault()
         console.log("submitting")
         const API_KEY = `apikey=fd72e0f7`;
-
         const url = `http://www.omdbapi.com/?s=${movieSearch}&${API_KEY}`;
         // change the "i" to "s"
 

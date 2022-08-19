@@ -55,12 +55,8 @@ function App() {
       <h2>This is a movie app created by Rahmin Shoukoohi</h2>
       <MovieContainer setSelectedMovie={setSelectedMovie} />
       <Routes>
-       
         <Route path="/about" element={<div>Why you do dis to us, Joe..</div>} />
-        
-        <Route
-          path="/details"
-          element={<SpecificMovie setRahminMovie={setRahminMovie} />}
+        <Route path="/details" element={<SpecificMovie setRahminMovie={setRahminMovie} />}
         ></Route>
       </Routes>
     </div>

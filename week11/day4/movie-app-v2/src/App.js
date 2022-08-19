@@ -32,7 +32,7 @@ function App() {
         type="text"
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={findMovie}>Search</button>
+      <button className="button" onClick={findMovie}>Search</button>
 
       <Routes>
         <Route

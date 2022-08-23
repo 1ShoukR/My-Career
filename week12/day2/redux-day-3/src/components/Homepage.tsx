@@ -6,8 +6,8 @@ import { createClient } from '@supabase/supabase-js';
 
 
 const Homepage = (): JSX.Element => {
-    const supabaseUrl = ""
-    const supabaseAnonKey = ""
+    const supabaseUrl = "" //removed supabase url
+    const supabaseAnonKey = "" // removed supabase anonymous key
     const sendToDatabase = async () => {
         const { data, error } = await supabase
         .from('ProductsDatabase')

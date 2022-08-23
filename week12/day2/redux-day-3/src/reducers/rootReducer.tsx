@@ -1,9 +1,11 @@
 type State = {
     counter: number;
+    user: string;
 };
 
 const initialState: State = {
     counter: 0,
+    user: "joe"
 };
 
 type Action = {
@@ -13,8 +15,10 @@ type Action = {
 
 const rootReducer = (state = initialState, action: Action) => {
 switch (action?.type) {
-    case 'ADD':
-        return { ...state };
+    case 'INCREMENT':
+        return { ...state, counter: state.counter + 1 };
+    case "DECREMENT":
+        return {...state, counter: state.counter - 1}
     default:
         return state;
 }

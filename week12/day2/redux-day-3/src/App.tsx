@@ -1,15 +1,17 @@
 import React from 'react';
 import { useAppSelector, useAppDispatch } from './app/hooks';
 import './App.css';
+import Homepage from './components/Homepage';
+import Product from './components/Product';
+import Cart from './components/Cart';
+
 
 function App() {
   const dispatch = useAppDispatch()
   const counter = useAppSelector((state) => state.counter)
   return (
     <div className="App">
-      <h1>{counter}</h1>
-      <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
-      <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+      <Homepage />
     </div>
   );
 }

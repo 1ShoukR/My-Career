@@ -2,6 +2,7 @@ import './App.css';
 import { useSelector, useDispatch } from "react-redux" 
 import Welcome from './components/Welcome';
 import WeatherCard from "./components/WeatherCard"
+import SearchButton from './components/SearchButton';
 
 function App() {
   const dispatch = useDispatch()
@@ -21,10 +22,8 @@ function App() {
   return (
     <div className="App">
       <Welcome />
-      <div className="weatherCard">
-      <button className="searchButton" disabled={!location ? true : false} onClick={() => getWeather()}>
-        Search
-      </button>
+      <div>
+        <SearchButton />
       <WeatherCard />
       </div>
     </div>

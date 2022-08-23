@@ -54,6 +54,7 @@
   color: rgb(0, 1, 5);
   cursor: pointer;
   transition: .2s ease-in-out;
+  margin-left: 75px;
 }
 
 .weatherData {
@@ -69,6 +70,7 @@
 
 .inputField {
     margin: 20px;
+    margin-left: 80px;
     border: none;
     outline: none;
     padding: .1em 1em;

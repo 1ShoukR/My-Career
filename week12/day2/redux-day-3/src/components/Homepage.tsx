@@ -6,8 +6,8 @@ import { createClient } from '@supabase/supabase-js';
 
 
 const Homepage = (): JSX.Element => {
-    const supabaseUrl = 'https://mxakcphctxajogkuteth.supabase.co';
-    const supabaseAnonKey ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMDE0NTg3OCwiZXhwIjoxOTM1NzIxODc4fQ.0qra9FQYuKCkgMteZ0ZAe2wrMx2v1IFGwsU60Oi4KwY';
+    const supabaseUrl = '';
+    const supabaseAnonKey ='';
     const sendToDatabase = async () => {
         const { data, error } = await supabase
         .from('ProductsDatabase')

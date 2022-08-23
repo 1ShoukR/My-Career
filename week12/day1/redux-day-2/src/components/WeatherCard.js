@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'; 
 
 const WeatherCard = () => {
-    const weather = useSelector((state) => state.weather);
+const weather = useSelector((state) => state.weather);
 return (
 <div className="weatherCard">
     <h2 className="currentTemp">Current Tempterature {weather?.main?.temp} °F</h2>

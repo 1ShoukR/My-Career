@@ -47,14 +47,13 @@
   margin: .5em;
   border-radius: 10px;
   border: none;
-  height: 20px;
-  width: 60px;
+  height: 30px;
+  width: 80px;
   outline: none;
   background: #7c7c7c2b;
   color: rgb(0, 1, 5);
   cursor: pointer;
   transition: .2s ease-in-out;
-
 }
 
 .weatherData {

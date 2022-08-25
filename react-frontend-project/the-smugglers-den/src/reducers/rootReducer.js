@@ -6,6 +6,7 @@ const initialState = {
     starships: [],
     planets: [],
     favorites: [],
+    movies: []
 };
 
 const rootReducer = (state=initialState, action) => {
@@ -18,6 +19,8 @@ const rootReducer = (state=initialState, action) => {
         return {
             ...state, 
             favorites: [...state.favorites, action.payload]}
+    case "SET_MOVIES":
+        return {...state, movies: action.payload}
     default:
         return state
     }

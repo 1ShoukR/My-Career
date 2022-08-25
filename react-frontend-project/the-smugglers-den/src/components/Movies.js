@@ -7,13 +7,6 @@ import { MovieCard } from './MovieCard';
 const Movies = () => {
   const dispatch = useDispatch()
   const movie = useSelector((state) => state.movies)
-    // const fetchMovies = async () => {
-    //     const url = `https://swapi.dev/api/films/`;
-    //     const res = await fetch(url);
-    //     const movieData = await res.json();
-    //     console.log('movie data', movieData);
-    // };
-    
   return (
     <div>
       <h1>Movies</h1>

@@ -8,6 +8,9 @@ import logger from 'redux-logger';
 import rootReducer from './reducers/rootReducer';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
+import People from './components/People';
+import Starships from './components/Starships';
+import Movies from './components/Movies';
 
 const store = createStore(rootReducer, applyMiddleware(logger));
 
@@ -20,6 +23,9 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="tos" element={<div>Tos Page</div>} />
+        <Route path="people" element={<People />} />
+        <Route path="starships" element={<Starships />} />
+        <Route path="movies" element={<Movies />} />
       </Routes>
     </Provider>
   </BrowserRouter>

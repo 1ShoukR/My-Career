@@ -1,8 +1,6 @@
 import React from 'react'
 
 const initialState = {
-    // starships: {starship:[]},
-    // plantes: {planet:[]}
     starships: [],
     planets: [],
     favorites: [],

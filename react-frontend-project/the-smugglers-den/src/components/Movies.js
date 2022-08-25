@@ -9,7 +9,11 @@ const Movies = () => {
     };
     fetchMovies();
   return (
-    <div>Movies</div>
+    <div>
+      <h1>
+        Movies
+      </h1>
+    </div>
   )
 }
 

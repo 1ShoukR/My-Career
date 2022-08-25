@@ -1,16 +1,24 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'; 
+import StarshipCard from './StarshipCard';
+import fetchStarships from '../actions/fetchStarships';
 
 const Starships = () => {
-    const fetchStarships = async () => {
-        const url = `https://swapi.dev/api/starships/9/`;
-        const res = await fetch(url);
-        const starshipData = await res.json();
-        console.log('starship data', starshipData);
-    };
-    fetchStarships();
-return (
-    <div>Starships</div>
-)
+    const dispatch = useDispatch();
+    const starship = useSelector((state) => state.starships);
+    return (
+    <div>
+        <h1>Starships</h1>
+        <button onClick={() => fetchStarships(dispatch)}>Get Starships</button>
+        <h1>{starship?.results?.map((item) =>{ // put into Starship Card
+            return (
+                <>
+                    <StarshipCard item={item}/>
+                </>
+            )
+        })}</h1>
+    </div>
+    );
 }
 
 export default Starships

@@ -8,8 +8,8 @@ const Movies = () => {
   const dispatch = useDispatch()
   const movie = useSelector((state) => state.movies)
   return (
-    <div>
-      <h1>Movies</h1>
+    <div className='movieContainer'>
+      <h1 className='moviesTitle'>Movies</h1>
       <button onClick={() =>{fetchMovies(dispatch);}}>Get Movies</button>
       <h1>{movie?.results?.map((item) =>{
         return(

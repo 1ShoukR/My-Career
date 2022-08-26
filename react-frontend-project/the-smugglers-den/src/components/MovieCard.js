@@ -7,7 +7,7 @@ export const MovieCard = (props) => {
 const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className='movieCardContainer'>
         <h1>Movie Title: {props.item.title}</h1>
         <p>Director: {props.item.director}</p>
         <p>Summary: {props.item.opening_crawl}</p>

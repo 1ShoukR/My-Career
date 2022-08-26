@@ -1,5 +1,5 @@
 
-const fetchMovies = async (dispatch) => {
+export const fetchMovies = async (dispatch) => {
     const url = `https://swapi.dev/api/films/`;
     const res = await fetch(url);
     const movieData = await res.json();
@@ -7,4 +7,4 @@ const fetchMovies = async (dispatch) => {
     console.log('movie data', movieData);
     };
 
-    export default fetchMovies
+

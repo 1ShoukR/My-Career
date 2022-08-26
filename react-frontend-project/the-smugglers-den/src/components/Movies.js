@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'; 
-import fetchMovies from "../actions/fetchMovies"
+import {fetchMovies, } from "../actions/fetchMovies"
 import { MovieCard } from './MovieCard';
 
 

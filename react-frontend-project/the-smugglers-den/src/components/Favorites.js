@@ -1,11 +1,11 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'; 
+import { useSelector } from 'react-redux'; 
 import FavoriteCard from './FavoriteCard';
 
 
 
 const Favorites = () => {
-const dispatch = useDispatch()
+
 
 const favorites = useSelector((state) => state.favorites)
   return (
@@ -15,7 +15,7 @@ const favorites = useSelector((state) => state.favorites)
             {favorites.map((fav) =>{
               return (
                 <>
-                  {<FavoriteCard fav={fav}/>}
+                  <FavoriteCard fav={fav}/>
                 </>
               )
             })}

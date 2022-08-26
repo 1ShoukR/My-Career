@@ -1,10 +1,12 @@
-import React from 'react'
 
 const initialState = {
     starships: [],
     planets: [],
     favorites: [],
-    movies: []
+    movies: [],
+    people: [],
+    vehicles: [],
+    species: []
 };
 
 const rootReducer = (state=initialState, action) => {
@@ -19,6 +21,12 @@ const rootReducer = (state=initialState, action) => {
             favorites: [...state.favorites, action.payload]}
     case "SET_MOVIES":
         return {...state, movies: action.payload}
+    case "SET_PEOPLE":
+        return {...state, people: action.payload}
+    case "SET_VEHICLES":
+        return {...state, vehicles: action.payload}
+    case "SET_SPECIES": 
+            return {...state, species: action.payload}
     default:
         return state
     }

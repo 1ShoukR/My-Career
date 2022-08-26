@@ -9,3 +9,9 @@
         - starships (has 36 starships) (created component) (create button to add to favorites)
         - vehicles (has 39 vehicles) (created component) (create button to add to favorites)
         - species (has 37 species) (created component) (create button to add to favorites)
+
+## TO DOs
+- add "next" buttons on pages and create new API calls (completed)
+- make button that transaltes everything to "wookie" language
+- make a buttonm that displays your favorites, rather than have them displayed instantly on the page
+- add input field to each page to search for specific star wars item

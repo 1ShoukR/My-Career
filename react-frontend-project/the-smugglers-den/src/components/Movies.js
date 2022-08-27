@@ -11,7 +11,7 @@ const Movies = () => {
     <div className='movieContainer'>
       <h1 className='moviesTitle'>Movies</h1>
       <button onClick={() =>{fetchMovies(dispatch);}}>Get Movies</button>
-      <h1>{movie?.results?.map((item) =>{
+      <h1 className='h1Card'>{movie?.results?.map((item) =>{
         return(
         <>
           <MovieCard item={item}/>

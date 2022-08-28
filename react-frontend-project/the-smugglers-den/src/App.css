@@ -1,5 +1,8 @@
+  @import url(https://allfont.net/allfont.css?fonts=star-jedi);
+
 .App {
   color: white;
+  font-family: 'Star Jedi', arial;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +14,9 @@
   background-size: cover;
   height: 100vh;
   width: auto;
+  background-repeat: no-repeat;
+  font-weight: 400;
+  overflow: none;
 }
 .movieContainer{
   display: flex;
@@ -18,7 +24,9 @@
   justify-content: center;
   align-items: center;
   color: white;
+  margin: 10px 20px 20px;
 }
+
 
 .h1Card{
   display: flex;
@@ -33,14 +41,32 @@
   align-items: center;
   color: white;
   width: 300px;
-  font-size: 10px;
+  font-size: 15px;
   border: 1px solid white;
   border-radius: 20px;
-  
+  font-family: 'Star Jedi', arial;
+  text-shadow: 3px 3px 3px #aaa;
+  padding: 0px;
+  font-weight: 400;
+  margin: 0px;
 }
 
 .movieTitle{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+.director{
+  font-family: 'Star Jedi', arial;
+}
+
+.summary {
+  padding: 5px;
 }
 
 /* https://i.pinimg.com/originals/d7/a6/11/d7a61190a836bdcfc62bf97af4f4c74b.png

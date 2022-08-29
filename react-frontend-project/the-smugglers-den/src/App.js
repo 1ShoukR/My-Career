@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'; 
 import Movies from './components/Movies';
+import Button from '@mui/material/Button';
 
 
 function App() {
@@ -20,25 +21,39 @@ function App() {
         <div className="mainPageComponents">
           <h4>Click any of the buttons to go to your favorite page!</h4>
           <Link className="mainPageButtons" to="/movies">
-            <button className="bootons">Movies</button>
+            <Button variant="outlined" size="large" className="bootons">
+              Movies
+            </Button>
           </Link>
           <Link className="mainPageButtons" to="/people">
-            <button className="bootons">People</button>
+            <Button variant="outlined" size="large" className="bootons">
+              People
+            </Button>
           </Link>
           <Link className="mainPageButtons" to="planets">
-            <button className="bootons">Planets</button>
+            <Button variant="outlined" size="large" className="bootons">
+              Planets
+            </Button>
           </Link>
           <Link className="mainPageButtons" to="species">
-            <button className="bootons">Species</button>
+            <Button variant="outlined" size="large" className="bootons">
+              Species
+            </Button>
           </Link>
           <Link className="mainPageButtons" to="/starships">
-            <button className="bootons">Starships</button>
+            <Button variant="outlined" size="large" className="bootons">
+              Starships
+            </Button>
           </Link>
           <Link className="mainPageButtons" to="vehicles">
-            <button className="bootons">Vehicles</button>
+            <Button variant="outlined" size="large" className="bootons">
+              Vehicles
+            </Button>
           </Link>
           <Link className="mainPageButtons" to="favorites">
-            <button className="bootons">Favorites</button>
+            <Button variant="outlined" size="large" className="bootons">
+              Favorites
+            </Button>
           </Link>
           <div>
             <h2>Time to get nerdy!</h2>

@@ -7,17 +7,84 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/StarfieldSimulation004.gif");
+  background-image: url("https://wallpapercave.com/wp/pEeUsp1.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 100vh;
   width: auto;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   font-weight: 400;
   overflow: none;
 }
+
+ul li { 
+  display:inline-block;
+}
+
+
+
+.mainPageComponents {
+  margin: 20px;
+  display: inline-block;
+}
+
+.mainPageButtons {
+  padding: 0px;
+}
+
+.mainPageContainer {
+
+}
+
+.mainLogo{
+  top: 40px;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 0px;
+}
+
+.bootons {
+  margin: 20px;
+}
+
+a {
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-family:helvetica;
+  padding: 50px;
+}
+
+
+a:hover {
+    color:#333333;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#333333;
+    text-decoration: none;
+}
+
+.navbar-nav {
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #9d9d9d;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #FFE807;
+}
+
+
+
 .movieContainer{
   display: flex;
   flex-direction: column;
@@ -32,6 +99,13 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+
+.h1VehicleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .movieCardContainer{
@@ -67,6 +141,52 @@
 
 .summary {
   padding: 5px;
+}
+
+.vehiclesTitle {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+.vehiclesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 10px 20px 20px;
+}
+
+.vehicleCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 300px;
+  height: 370px;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-family: 'Star Jedi', arial;
+  text-shadow: 3px 3px 3px #aaa;
+  padding: 0px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.modelName {
+  font-family: 'Star Jedi', arial;
+}
+
+.nextPageButtons {
+  display: flex;
+  flex-direction: row;
 }
 
 /* https://i.pinimg.com/originals/d7/a6/11/d7a61190a836bdcfc62bf97af4f4c74b.png

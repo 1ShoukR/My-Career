@@ -18,18 +18,18 @@ return (
     </nav> */}
 
     <nav className="navbar navbar-inverse navbar-fixed-top">
-    <div className="collapse navbar-collapse" id="myNavbar">
-    <ul className="nav navbar-nav">
-        <li ><Link  to="/"><img className='mainLogo'src="https://seeklogo.com/images/S/Star_Wars-logo-2B2C24F703-seeklogo.com.png" alt="home" /></Link></li>
-        <li><Link className="a" to="/people">People</Link></li>
-        <li><Link className="a" to="/starships">Starships</Link></li>
-        <li><Link className="a" to="/movies">Movies</Link></li>
-        <li><Link className="a" to="planets">Planets</Link></li>
-        <li><Link className="a" to="vehicles">Vehicles</Link></li>
-        <li><Link className="a" to="species">Species</Link></li>
-        <li><Link className="a" to="/tos">Terms of services</Link></li>
-        <li><Link className="a" to="favorites">Favorites</Link></li>
-    </ul>
+      <div className="collapse navbar-collapse" id="myNavbar">
+        <ul className="nav navbar-nav">
+          <li><Link  to="/"><img className='mainLogo'src="https://seeklogo.com/images/S/Star_Wars-logo-2B2C24F703-seeklogo.com.png" alt="home" /></Link></li>
+          <li><Link className='topNav' to="/people">People</Link></li>
+          <li><Link className='topNav' to="/starships">Starships</Link></li>
+          <li><Link className='topNav' to="/movies">Movies</Link></li>
+          <li><Link className='topNav' to="planets">Planets</Link></li>
+          <li><Link className='topNav' to="vehicles">Vehicles</Link></li>
+          <li><Link className='topNav' to="species">Species</Link></li>
+          <li><Link className='topNav' to="/tos">Terms of services</Link></li>
+          <li><Link className='topNav' to="favorites">Favorites</Link></li>
+      </ul>
     </div>
 </nav> 
 </div>

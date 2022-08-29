@@ -22,7 +22,7 @@ const dispatch = useDispatch()
           <p>Crew: {props.item.crew}</p>
         </div>
         <div className='manufacteror'>
-          <p>Manufacteror: {props.item.model}</p>
+          <p>Manufacturer: {props.item.model}</p>
         </div>
         <div className='maxSpeed'>
           <p>Max Speed:{props.item.max_atmosphering_speed} KM/H</p>

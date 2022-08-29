@@ -2,32 +2,36 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'; 
 import PeopleCard from './PeopleCard';
 import {fetchPeople, nextPeoplePage2, nextPeoplePage3, nextPeoplePage4, nextPeoplePage5, nextPeoplePage6, nextPeoplePage7, nextPeoplePage8, nextPeoplePage9} from '../actions/fetchPeople';
-
+import Button from '@mui/material/Button';
 
 const People = () => {
 const dispatch = useDispatch()
 const people = useSelector((state) => state.people)
 
 return (
-    <div>
-        <h1>People</h1>
-        <button onClick={() =>{fetchPeople(dispatch)}}>Get People</button>
-        <h1>{people?.results?.map((item) =>{
+<div className='peopleContainer'>
+        <div className='peopleTitle'>
+            <h1>People</h1>
+        </div>
+        <Button variant="outlined" size="large" onClick={() =>{fetchPeople(dispatch)}}>Get People</Button>
+        <h1 className='h1PeopleCard'>{people?.results?.map((item) =>{
             return (
             <>
                 <PeopleCard item={item}/>
             </>
             )
         })}</h1>
-        <button onClick={() =>{nextPeoplePage2(dispatch)}}>Page 2</button>
-        <button onClick={() =>{nextPeoplePage3(dispatch)}}>Page 3</button>
-        <button onClick={() =>{nextPeoplePage4(dispatch)}}>Page 4</button>
-        <button onClick={() =>{nextPeoplePage5(dispatch)}}>Page 5</button>
-        <button onClick={() =>{nextPeoplePage6(dispatch)}}>Page 6</button>
-        <button onClick={() =>{nextPeoplePage7(dispatch)}}>Page 7</button>
-        <button onClick={() =>{nextPeoplePage8(dispatch)}}>Page 8</button>
-        <button onClick={() =>{nextPeoplePage9(dispatch)}}>Page 9</button>
+    <div className='nextPageButtons'>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage2(dispatch)}}>Page 2</Button>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage3(dispatch)}}>Page 3</Button>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage4(dispatch)}}>Page 4</Button>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage5(dispatch)}}>Page 5</Button>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage6(dispatch)}}>Page 6</Button>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage7(dispatch)}}>Page 7</Button>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage8(dispatch)}}>Page 8</Button>
+        <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage9(dispatch)}}>Page 9</Button>
     </div>
+</div>
 )
 }
 

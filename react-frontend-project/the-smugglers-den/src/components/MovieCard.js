@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'; 
-import setFavorites from '../actions/setFavorites';
+import {setFavorites} from '../actions/setFavorites';
 import Button from '@mui/material/Button';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import HdRoundedIcon from '@mui/icons-material/HdRounded';

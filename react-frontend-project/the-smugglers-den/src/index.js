@@ -16,6 +16,7 @@ import Vehicles from './components/Vehicles';
 import Species from './components/Species';
 import PageNotFound from './components/PageNotFound';
 import Favorites from './components/Favorites';
+import TermsofService from './components/TermsofService';
 
 const store = createStore(rootReducer, applyMiddleware(logger));
 
@@ -27,7 +28,7 @@ root.render(
       <Navbar />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="tos" element={<div>Tos Page</div>} />
+        <Route path="tos" element={<TermsofService/>} />
         <Route path="people" element={<People />} />
         <Route path="starships" element={<Starships />} />
         <Route path="movies" element={<Movies />} />

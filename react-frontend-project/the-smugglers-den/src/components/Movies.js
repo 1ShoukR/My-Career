@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 const Movies = () => {
   const dispatch = useDispatch()
-  const movie = useSelector((state) => state.movies)
+  const movie = useSelector((state) => state.moviesR.movies)
 
   useEffect(() => {
     fetchMovies(dispatch);

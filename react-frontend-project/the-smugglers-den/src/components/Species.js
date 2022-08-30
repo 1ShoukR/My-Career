@@ -11,7 +11,7 @@ const Species = () => {
       }, []);
 
 const dispatch = useDispatch()
-const specie = useSelector((state) => state.species)
+const specie = useSelector((state) => state.speciesR.species)
   return (
     <div className="speciesContainer">
       <div className="speciesTitle">
@@ -27,6 +27,7 @@ const specie = useSelector((state) => state.species)
         })}
       </h1>
       <div className='nextPageButtons'>
+        <Button variant="outlined"size="large"onClick={() => {fetchSpecies(dispatch);}}>Page 1</Button>
         <Button variant="outlined"size="large"onClick={() => {nextSpeciesPage2(dispatch);}}>Page 2</Button>
         <Button variant="outlined"size="large"onClick={() => {nextSpeciesPage3(dispatch);}}>Page 3</Button>
         <Button variant="outlined"size="large"onClick={() => {nextSpeciesPage4(dispatch);}}>Page 4</Button>

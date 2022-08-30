@@ -14,7 +14,7 @@ const Vehicles = () => {
 
 
 const dispatch = useDispatch()
-const vehicle = useSelector((state) => state.vehicles)
+const vehicle = useSelector((state) => state.vehiclesR.vehicles)
   return (
     <div className='vehiclesContainer'>
       <div className='vehiclesTitle'>
@@ -28,6 +28,7 @@ const vehicle = useSelector((state) => state.vehicles)
           )
         })}</h1>
         <div className='nextPageButtons'>
+        <Button variant="outlined" size="large" onClick={() =>{fetchVehicles(dispatch)}}>Page 1</Button>
         <Button variant="outlined" size="large" onClick={() =>{fetchVehiclesPage2(dispatch)}}>Page 2</Button>
         <Button variant="outlined" size="large" onClick={() =>{fetchVehiclesPage3(dispatch)}}>Page 3</Button>
         <Button variant="outlined" size="large" onClick={() =>{fetchVehiclesPage4(dispatch)}}>Page 4</Button>

@@ -14,7 +14,7 @@ const Starships = () => {
     }, []);
 
     const dispatch = useDispatch();
-    const starship = useSelector((state) => state.starships);
+    const starship = useSelector((state) => state.starshipR.starships);
     return (
     <div className='starshipsContainer'>
         <div className='starshipTitle'>
@@ -28,6 +28,7 @@ const Starships = () => {
             )
         })}</h1>
     <div className='nextPageButtons'>
+        <Button variant="outlined" size="large" onClick={()=>{fetchStarships(dispatch)}}>Page 1</Button>
         <Button variant="outlined" size="large" onClick={() =>{fetchStarshipsPage2(dispatch)}}>Page 2</Button>
         <Button variant="outlined" size="large" onClick={() =>{fetchStarshipsPage3(dispatch)}}>Page 3</Button>
         <Button variant="outlined" size="large" onClick={() =>{fetchStarshipsPage4(dispatch)}}>Page 4</Button>

@@ -13,7 +13,7 @@ const Planets = () => {
       }, []);
 
   const dispatch = useDispatch()
-  const planet = useSelector((state) => state.planets)
+  const planet = useSelector((state) => state.planetsR.planets)
   return (
     <div className="planetsContainer">
       <div className="planetsTitle">
@@ -29,6 +29,13 @@ const Planets = () => {
         })}
       </h1>
       <div className='nextPageButtons'>
+        <Button
+        variant='outlined'
+        size="large"
+        onClick={()=>{
+          fetchPlanets(dispatch)
+        }}
+        >Page 1</Button>
         <Button
           variant="outlined"
           size="large"

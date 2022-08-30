@@ -12,7 +12,7 @@ useEffect(() => {
     }, []);
 
 const dispatch = useDispatch()
-const people = useSelector((state) => state.people)
+const people = useSelector((state) => state.peopleR.people)
 
 return (
 <div className='peopleContainer'>
@@ -27,6 +27,7 @@ return (
             )
         })}</h1>
     <div className='nextPageButtons'>
+        <Button variant="outlined" size="large" onClick={()=>{fetchPeople(dispatch)}}>Page 1</Button>
         <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage2(dispatch)}}>Page 2</Button>
         <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage3(dispatch)}}>Page 3</Button>
         <Button variant="outlined" size="large" onClick={() =>{nextPeoplePage4(dispatch)}}>Page 4</Button>

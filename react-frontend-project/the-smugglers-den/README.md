@@ -15,3 +15,4 @@
 - make button that transaltes everything to "wookie" language
 - make a buttonm that displays your favorites, rather than have them displayed instantly on the page
 - add input field to each page to search for specific star wars item
+- Finish out 404 error page

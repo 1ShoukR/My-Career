@@ -2,9 +2,7 @@ import React from 'react'
 
 const MainComponent = () => {
   return (
-    <div>
-        
-    </div>
+    <div>MainComponent</div>
   )
 }
 

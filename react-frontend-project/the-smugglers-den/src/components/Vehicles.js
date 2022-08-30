@@ -3,10 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import {fetchVehicles, fetchVehiclesPage2, fetchVehiclesPage3, fetchVehiclesPage4} from '../actions/fetchVehicles';
 import { VehicleCard } from './VehicleCard';
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 
 
 const Vehicles = () => {
+      useEffect(() => {
+        fetchVehicles(dispatch);
+      }, []);
+
+
 const dispatch = useDispatch()
 const vehicle = useSelector((state) => state.vehicles)
   return (
@@ -14,7 +20,6 @@ const vehicle = useSelector((state) => state.vehicles)
       <div className='vehiclesTitle'>
         <h1>Vehicles</h1>
       </div>
-        <Button variant="outlined" size="large" onClick={() => {fetchVehicles(dispatch)}}>Get Vehicles</Button>
         <h1 className='h1VehicleCard'>{vehicle?.results?.map((item) =>{
           return (
             <>

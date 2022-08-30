@@ -1,10 +1,10 @@
 
 export const fetchStarships = async (dispatch) => {
+  alert("Page 1 loading..")
   const url = `https://swapi.dev/api/starships/`;
   const res = await fetch(url);
   const starshipData = await res.json();
   dispatch({ type: 'SET_STARSHIPS', payload: starshipData });
-  alert("Page 1 loading..")
   console.log('starship data', starshipData);
 };
 

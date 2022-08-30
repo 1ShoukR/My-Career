@@ -2,8 +2,8 @@ export const fetchPlanets = async (dispatch) => {
     const url =`https://swapi.dev/api/planets/`;
     const res = await fetch(url)
     const planetData = await res.json()
-    dispatch({type: "SET_PLANETS", payload: planetData})
     alert("Page 1 loading..")
+    dispatch({type: "SET_PLANETS", payload: planetData})
     console.log("planet data", planetData)
 }
 

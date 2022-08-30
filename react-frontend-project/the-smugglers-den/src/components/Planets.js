@@ -3,10 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import  {PlanetsCard } from "./PlanetsCard"
 import {fetchPlanets, fetchPlanetsPage2, fetchPlanetsPage3, fetchPlanetsPage5, fetchPlanetsPage4, fetchPlanetsPage6} from '../actions/fetchPlanets';
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 
 
 const Planets = () => {
+      useEffect(() => {
+        fetchPlanets(dispatch);
+      }, []);
+
   const dispatch = useDispatch()
   const planet = useSelector((state) => state.planets)
   return (
@@ -14,15 +19,6 @@ const Planets = () => {
       <div className="planetsTitle">
         <h1>planets</h1>
       </div>
-      <Button
-        variant="outlined"
-        size="large"
-        onClick={() => {
-          fetchPlanets(dispatch);
-        }}
-      >
-        Get Planets
-      </Button>
       <h1 className='h1PlanetCard'>
         {planet?.results?.map((item) => {
           return (

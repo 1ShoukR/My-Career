@@ -2,6 +2,7 @@ export const fetchPeople = async (dispatch) => {
   const url = `https://swapi.dev/api/people/`;
   const res = await fetch(url);
   const peopleData = await res.json();
+  alert("Page 1 Loading..")
   dispatch({ type: 'SET_PEOPLE', payload: peopleData });
   console.log('people Data', peopleData);
 };

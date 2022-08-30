@@ -3,8 +3,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import {fetchSpecies, nextSpeciesPage2, nextSpeciesPage3, nextSpeciesPage4} from '../actions/fetchSpecies';
 import { SpeciesCard } from './SpeciesCard';
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 const Species = () => {
+      useEffect(() => {
+        fetchSpecies(dispatch);
+      }, []);
+
 const dispatch = useDispatch()
 const specie = useSelector((state) => state.species)
   return (
@@ -12,15 +17,6 @@ const specie = useSelector((state) => state.species)
       <div className="speciesTitle">
         <h1>species</h1>
       </div>
-      <Button
-        variant="outlined"
-        size="large"
-        onClick={() => {
-          fetchSpecies(dispatch);
-        }}
-      >
-        Get Species
-      </Button>
       <h1 className="h1SpeciesCard">
         {specie?.results?.map((item) => {
           return (

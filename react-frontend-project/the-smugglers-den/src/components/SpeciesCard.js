@@ -11,25 +11,25 @@ return (
   <div>
     <Card className="speciesCardContainer">
       <div className="speciesTitle">
-        <h1>Species: {props.item.name}</h1>
+        <h1>{props.item.name}</h1>
       </div>
       <div className="classification">
-        <p>Classification: {props.item.classification}</p>
+        <p>Classified as  {props.item.classification}</p>
       </div>
       <div className="language">
-        <p>Spoken Language: {props.item.language}</p>
+        <p>Known to speak in {props.item.language}</p>
       </div>
       <div className="designation">
-        <p>Designation: {props.item.designation}</p>
+        <p>Designated as a {props.item.designation} being</p>
       </div>
       <div className="averageHeight">
-        <p>Average Height: {props.item.average_height} Centimeters</p>
+        <p>Average Height of {props.item.average_height} Centimeters</p>
       </div>
       <div className="averageLifespan">
-        <p>Average Lifespan: {props.item.average_lifespan} Years</p>
+        <p>Average lifespan of {props.item.average_lifespan} Years</p>
       </div>
       <div className="eyeColor">
-        <p>Eye Color: {props.item.eye_colors}</p>
+        <p>Known Eye Color {props.item.eye_colors}</p>
       </div>
       <div className="favoritesButton">
         <Button

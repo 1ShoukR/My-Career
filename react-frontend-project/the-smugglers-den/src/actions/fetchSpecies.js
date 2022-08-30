@@ -2,8 +2,8 @@ export const fetchSpecies = async (dispatch) => {
   const url = `https://swapi.dev/api/species/`;
   const res = await fetch(url);
   const speciesData = await res.json();
-  dispatch({ type: 'SET_SPECIES', payload: speciesData });
   alert("Species page 1 loaded..")
+  dispatch({ type: 'SET_SPECIES', payload: speciesData });
   console.log('species data',speciesData);
 };
 

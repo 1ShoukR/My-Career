@@ -3,9 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import StarshipCard from './StarshipCard';
 import {fetchStarships, fetchStarshipsPage2, fetchStarshipsPage3, fetchStarshipsPage4} from '../actions/fetchStarships';
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 
 const Starships = () => {
+
+    useEffect(() => {
+      //Runs only on the first render
+        fetchStarships(dispatch)
+    }, []);
+
     const dispatch = useDispatch();
     const starship = useSelector((state) => state.starships);
     return (
@@ -13,7 +20,6 @@ const Starships = () => {
         <div className='starshipTitle'>
             <h1>Starships</h1>  
         </div>
-        <Button variant="outlined" size="large" onClick={() => fetchStarships(dispatch)}>Get Starships</Button>
         <h1 className='h1StarshipCard'>{starship?.results?.map((item) =>{ // put into Starship Card
             return (
                 <>

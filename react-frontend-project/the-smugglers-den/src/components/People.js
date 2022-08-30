@@ -3,8 +3,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import PeopleCard from './PeopleCard';
 import {fetchPeople, nextPeoplePage2, nextPeoplePage3, nextPeoplePage4, nextPeoplePage5, nextPeoplePage6, nextPeoplePage7, nextPeoplePage8, nextPeoplePage9} from '../actions/fetchPeople';
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 const People = () => {
+
+useEffect(() => {
+    fetchPeople(dispatch);
+    }, []);
+
 const dispatch = useDispatch()
 const people = useSelector((state) => state.people)
 
@@ -13,7 +19,6 @@ return (
         <div className='peopleTitle'>
             <h1>People</h1>
         </div>
-        <Button variant="outlined" size="large" onClick={() =>{fetchPeople(dispatch)}}>Get People</Button>
         <h1 className='h1PeopleCard'>{people?.results?.map((item) =>{
             return (
             <>

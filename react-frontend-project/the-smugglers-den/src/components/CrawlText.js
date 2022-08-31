@@ -10,11 +10,11 @@ const CrawlText = () => {
             <p id="title">Episode I</p>
             <p id="subtitle">THE CODER'S MENACE</p>
             <br />
-            <p>The Dark Coder himself, Joe Fraisure, has been scene escaping his home planet "Texas" to defeat The Cohort</p>
+            <p id="crawl">The Dark Coder himself, Joe Fraisure, has been scene escaping his home planet "Texas" to defeat The Cohort</p>
             <br />
-            <p>Meanwhile, The Cohort have established connection with their long lost ally, Blke, and established a basecamp somewhere in the outer rim</p>
+            <p id="crawl">Meanwhile, The Cohort have established connection with their long lost ally, Blke, and established a basecamp somewhere in the outer rim</p>
             <br />
-            <p></p>    
+            <p id="crawl"></p>    
         </div>  
     </div>
   )

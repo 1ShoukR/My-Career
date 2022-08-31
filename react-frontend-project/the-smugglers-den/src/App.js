@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'; 
 import Movies from './components/Movies';
 import Button from '@mui/material/Button';
+import CrawlText from './components/CrawlText';
 
 
 
@@ -12,16 +13,20 @@ function App() {
   const dispatch = useDispatch();
   return (
     <div className="App">
-      <img
-        src="https://see.fontimg.com/api/renderfont4/y0xm/eyJyIjoiZnMiLCJoIjoyOCwidyI6MTAwMCwiZnMiOjI4LCJmZ2MiOiIjMUMxQzFDIiwiYmdjIjoiI0YwRUFFQSJ9/V2VsY29tZSB0byBUaGUgU211Z2dsZXIncyBEZW4/star-jedi-outline.png"
-        alt="The Smuggler's Den"
-      />
+      <div className="smugglersDen">
+        <img
+          src="https://see.fontimg.com/api/renderfont4/y0xm/eyJyIjoiZnMiLCJoIjoyOCwidyI6MTAwMCwiZnMiOjI4LCJmZ2MiOiIjMUMxQzFDIiwiYmdjIjoiI0YwRUFFQSJ9/V2VsY29tZSB0byBUaGUgU211Z2dsZXIncyBEZW4/star-jedi-outline.png"
+          alt="The Smuggler's Den"
+        />
+      </div>
       <h5>All your Star Wars needs, in one place!</h5>
-      {/* <img
-        src="https://seeklogo.com/images/S/Star_Wars-logo-2B2C24F703-seeklogo.com.png"
-        alt="logo"
-      /> */}
       <div className="mainPageContainer">
+        <div className="rebelAliance">
+          {/* <img
+            src="https://cutewallpaper.org/24/rebel-alliance-logo-png/rebel-alliance-logo-vector-star-wars-rebel-symbol-pngstar-wars-logos-vector-free-transparent-png-images-pngaaacom.png"
+            alt="rebel alliance"
+          /> */}
+        </div>
         <div className="mainPageComponents">
           <h4>Click any of the buttons to go to your favorite page!</h4>
           <div className="mainPageButtons">
@@ -66,6 +71,7 @@ function App() {
           </div>
         </div>
       </div>
+      <CrawlText />
     </div>
   );
 }

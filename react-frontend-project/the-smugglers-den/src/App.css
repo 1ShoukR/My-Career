@@ -685,7 +685,7 @@ a:hover {
 
 
 
-p {
+ #crawl{
   color: #FFFF82;
 }
 .smugglersDen {
@@ -727,6 +727,7 @@ p {
 }
 
 #title, #subtitle {
+  color: #FFFF82;
   text-align: center;
 }
 

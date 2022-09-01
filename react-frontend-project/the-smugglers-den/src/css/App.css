@@ -137,7 +137,7 @@ ul li {
     width: fit-content;
   }
   #myNavbar {
-    width:auto;
+    width: 480px;
     border: 1px solid purple;
   }
   .App {

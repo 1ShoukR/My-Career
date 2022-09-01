@@ -4,6 +4,8 @@ import {fetchVehicles, fetchVehiclesPage2, fetchVehiclesPage3, fetchVehiclesPage
 import { VehicleCard } from './VehicleCard';
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
+import '../css/vehicles.css';
+
 
 
 
@@ -18,7 +20,7 @@ const vehicle = useSelector((state) => state.vehiclesR.vehicles)
   return (
     <div className='vehiclesContainer'>
       <div className='vehiclesTitle'>
-        <h1>Vehicles</h1>
+        <h1 className='pageTitle'>Vehicles</h1>
       </div>
         <h1 className='h1VehicleCard'>{vehicle?.results?.map((item) =>{
           return (

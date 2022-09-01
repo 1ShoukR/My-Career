@@ -1,0 +1,108 @@
+.speciesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 10px 20px 20px;
+}
+
+.speciesTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-size: 15px;
+  border-radius: 20px;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 3px 3px 3px #aaa;
+  font-weight: 400;
+  margin: 0px;
+}
+
+
+
+.h1SpeciesCard{
+  display: grid;
+  grid-template-columns: repeat(5, 300px);
+  gap: 50px;
+  margin: 0px;
+}
+
+
+.speciesCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 3px 3px 3px #aaa;
+  padding: 0px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.classification {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+.language {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+.designation {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+.averageHeight {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+.averageLifespan {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 500px) {
+  
+}

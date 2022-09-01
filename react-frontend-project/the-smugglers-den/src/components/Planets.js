@@ -4,6 +4,7 @@ import  {PlanetsCard } from "./PlanetsCard"
 import {fetchPlanets, fetchPlanetsPage2, fetchPlanetsPage3, fetchPlanetsPage5, fetchPlanetsPage4, fetchPlanetsPage6} from '../actions/fetchPlanets';
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
+import "../css/planets.css"
 
 
 
@@ -17,7 +18,7 @@ const Planets = () => {
   return (
     <div className="planetsContainer">
       <div className="planetsTitle">
-        <h1>planets</h1>
+        <h1>Planets</h1>
       </div>
       <h1 className='h1PlanetCard'>
         {planet?.results?.map((item) => {

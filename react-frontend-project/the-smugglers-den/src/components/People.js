@@ -4,6 +4,7 @@ import PeopleCard from './PeopleCard';
 import {fetchPeople, nextPeoplePage2, nextPeoplePage3, nextPeoplePage4, nextPeoplePage5, nextPeoplePage6, nextPeoplePage7, nextPeoplePage8, nextPeoplePage9} from '../actions/fetchPeople';
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
+import "../css/people.css"
 
 const People = () => {
 

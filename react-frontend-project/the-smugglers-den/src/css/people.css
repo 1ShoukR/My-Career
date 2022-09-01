@@ -1,0 +1,81 @@
+.peopleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 10px 20px 20px;
+}
+
+.peopleTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-size: 15px;
+  border-radius: 20px;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 3px 3px 3px #aaa;
+  font-weight: 400;
+  margin: 0px;
+}
+
+
+.h1PeopleCard {
+  display: grid;
+  grid-template-columns: repeat(5, 300px);
+  gap: 50px;
+}
+
+
+.peopleCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-size: 15px;
+  border-radius: 20px;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 3px 3px 3px #aaa;
+  font-weight: 400;
+  margin: 0px;
+}
+
+
+
+.birthYear {
+  font-family: 'Fredoka One', cursive;
+}
+
+.gender {
+  font-family: 'Star Jedi', arial;
+}
+
+.hairColor {
+  margin: 0px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.eyeColor {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px;
+  margin: 10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 500px) {
+  
+}

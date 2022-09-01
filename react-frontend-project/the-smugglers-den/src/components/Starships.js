@@ -4,12 +4,12 @@ import StarshipCard from './StarshipCard';
 import {fetchStarships, fetchStarshipsPage2, fetchStarshipsPage3, fetchStarshipsPage4} from '../actions/fetchStarships';
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
+import "../css/starships.css"
 
 
 const Starships = () => {
 
     useEffect(() => {
-      //Runs only on the first render
         fetchStarships(dispatch)
     }, []);
 
@@ -18,7 +18,7 @@ const Starships = () => {
     return (
     <div className='starshipsContainer'>
         <div className='starshipTitle'>
-            <h1>Starships</h1>  
+            <h1 className='meantToFly'>Starships</h1>  
         </div>
         <h1 className='h1StarshipCard'>{starship?.results?.map((item) =>{ // put into Starship Card
             return (

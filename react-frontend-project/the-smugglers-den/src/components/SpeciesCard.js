@@ -4,6 +4,7 @@ import {setFavorites} from '../actions/setFavorites';
 import Card from '@mui/material/Card';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Button } from '@mui/material';
+import '../css/species.css'
 
 export const SpeciesCard = (props) => {
 const dispatch = useDispatch();

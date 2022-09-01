@@ -4,6 +4,7 @@ import {fetchSpecies, nextSpeciesPage2, nextSpeciesPage3, nextSpeciesPage4} from
 import { SpeciesCard } from './SpeciesCard';
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
+import '../css/species.css';
 
 const Species = () => {
       useEffect(() => {
@@ -15,7 +16,7 @@ const specie = useSelector((state) => state.speciesR.species)
   return (
     <div className="speciesContainer">
       <div className="speciesTitle">
-        <h1>species</h1>
+        <h1>Species</h1>
       </div>
       <h1 className="h1SpeciesCard">
         {specie?.results?.map((item) => {

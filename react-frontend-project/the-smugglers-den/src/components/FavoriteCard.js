@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { removeFavorite } from '../actions/setFavorites';
+import '../css/favorites.css';
 
 const FavoriteCard = (props) => {
   const dispatch = useDispatch()

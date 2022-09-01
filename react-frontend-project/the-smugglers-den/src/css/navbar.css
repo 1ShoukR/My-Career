@@ -1,0 +1,63 @@
+a.topNav {
+    gap: 20px;
+    padding: 0px;
+}
+
+.mainLogo{
+    position: relative;
+    height: 100px;
+    width: 150px;
+    margin: 0px;
+}
+.nav {
+    background-color: #111;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+}
+
+
+a {
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+a:hover {
+    color:#333333;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#333333;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #9d9d9d;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #FFE807;
+}
+
+
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 500px) {
+  
+}

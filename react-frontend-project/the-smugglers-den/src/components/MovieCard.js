@@ -7,6 +7,7 @@ import HdRoundedIcon from '@mui/icons-material/HdRounded';
 import SdRoundedIcon from '@mui/icons-material/SdRounded';
 import Card from '@mui/material/Card';
 
+
 export const MovieCard = (props) => {
 const dispatch = useDispatch();
 

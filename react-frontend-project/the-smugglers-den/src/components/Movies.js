@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchMovies, } from "../actions/fetchMovies"
 import { MovieCard } from './MovieCard';
 import { useEffect } from 'react';
+import "../css/movies.css"
 
 
 const Movies = () => {

@@ -4,6 +4,7 @@ import {setFavorites} from '../actions/setFavorites';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import '../css/people.css';
 
 export const PeopleCard = (props) => {
 const dispatch = useDispatch()

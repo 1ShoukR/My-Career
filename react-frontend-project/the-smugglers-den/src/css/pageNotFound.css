@@ -1,0 +1,28 @@
+.pageNotFoundContainer {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 20px;
+  font-family: 'Fredoka One', cursive;
+  color: #f1f1f1;
+  text-shadow: 3px 3px 3px #aaa;
+  padding: 0px;
+  font-weight: 400;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 500px) {
+  
+}

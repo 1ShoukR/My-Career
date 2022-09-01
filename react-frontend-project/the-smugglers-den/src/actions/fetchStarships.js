@@ -5,6 +5,11 @@ export const fetchStarships = async (dispatch) => {
   const res = await fetch(url);
   const starshipData = await res.json();
   dispatch({ type: 'SET_STARSHIPS', payload: starshipData });
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('starship data', starshipData);
 };
 
@@ -14,6 +19,11 @@ export const fetchStarshipsPage2 = async (dispatch) => {
   const starshipData = await res.json();
   dispatch({ type: 'SET_STARSHIPS', payload: starshipData });
   alert("Page 2 loading..")
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   console.log('starship data', starshipData);
 };
 
@@ -23,6 +33,11 @@ export const fetchStarshipsPage3 = async (dispatch) => {
   const starshipData = await res.json();
   dispatch({ type: 'SET_STARSHIPS', payload: starshipData });
   alert('Page 3 loading..');
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('starship data', starshipData);
 };
 
@@ -32,6 +47,11 @@ export const fetchStarshipsPage4 = async (dispatch) => {
   const starshipData = await res.json();
   dispatch({ type: 'SET_STARSHIPS', payload: starshipData });
   alert('Page 4 loading..');
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('starship data', starshipData);
 };
 

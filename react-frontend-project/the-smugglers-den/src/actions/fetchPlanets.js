@@ -13,6 +13,11 @@ export const fetchPlanetsPage2 = async (dispatch) => {
   const planetData = await res.json();
   dispatch({ type: 'SET_PLANETS', payload: planetData });
   alert("Page 2 loading..")
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('planet data', planetData);
 };
 
@@ -22,6 +27,11 @@ export const fetchPlanetsPage3 = async (dispatch) => {
   const planetData = await res.json();
   dispatch({ type: 'SET_PLANETS', payload: planetData });
   alert('Page 3 loading..');
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('planet data', planetData);
 };
 
@@ -31,6 +41,11 @@ export const fetchPlanetsPage4 = async (dispatch) => {
   const planetData = await res.json();
   dispatch({ type: 'SET_PLANETS', payload: planetData });
   alert('Page 4 loading..');
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('planet data', planetData);
 };
 
@@ -40,6 +55,11 @@ export const fetchPlanetsPage5 = async (dispatch) => {
   const planetData = await res.json();
   dispatch({ type: 'SET_PLANETS', payload: planetData });
   alert('Page 5 loading..');
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('planet data', planetData);
 };
 
@@ -49,5 +69,10 @@ export const fetchPlanetsPage6 = async (dispatch) => {
   const planetData = await res.json();
   dispatch({ type: 'SET_PLANETS', payload: planetData });
   alert('Page 6 loading..');
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('planet data', planetData);
 };

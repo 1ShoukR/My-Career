@@ -13,6 +13,11 @@ export const nextSpeciesPage2 = async (dispatch) => {
     const speciesData = await res.json()
     dispatch({ type: 'SET_SPECIES', payload: speciesData });
     alert("Species page 2 loaded..")
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
     console.log('species data', speciesData);
 }
 
@@ -22,6 +27,11 @@ export const nextSpeciesPage3 = async (dispatch) => {
     const speciesData = await res.json();
     dispatch({ type: 'SET_SPECIES', payload: speciesData });
     alert("species page 3 loaded..")
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
     console.log('species data', speciesData);
 }
 
@@ -31,6 +41,11 @@ export const nextSpeciesPage4 = async (dispatch) => {
   const speciesData = await res.json();
   dispatch({ type: 'SET_SPECIES', payload: speciesData });
   alert('species page 4 loaded..');
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   console.log('species data', speciesData);
 };
 

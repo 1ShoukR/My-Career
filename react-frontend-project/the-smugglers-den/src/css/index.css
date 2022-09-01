@@ -24,8 +24,11 @@ code {
 
 
 
-@media (max-width: 768px) {
-
+@media (max-width: 800px) {
+body{
+  max-width: fit-content;
+  max-height: fit-content;
+}
 }
 
 

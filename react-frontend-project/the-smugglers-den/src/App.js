@@ -5,15 +5,14 @@ import Button from '@mui/material/Button';
 
 function App() {
   return (
-    <div className="App">
+  <div className="App">
       <div className="mainPageContainer">
-      <div className="smugglersDen">
-        <img
+        <p className='mainPageTitle'>Welcome to The Smuggler's Den</p>
+        {/* <img
           src="https://see.fontimg.com/api/renderfont4/y0xm/eyJyIjoiZnMiLCJoIjoyOCwidyI6MTAwMCwiZnMiOjI4LCJmZ2MiOiIjMUMxQzFDIiwiYmdjIjoiI0YwRUFFQSJ9/V2VsY29tZSB0byBUaGUgU211Z2dsZXIncyBEZW4/star-jedi-outline.png"
           alt="The Smuggler's Den"
-        />
-      </div>
-        <h3>This Website contains all your essential Star Wars needs, including lore not included within the original trilogy! </h3>
+        /> */}
+      <h3 className='websiteDescription'>This Website contains all your essential Star Wars needs, including lore not included within the original trilogy! </h3>
         </div>
         <div className="mainPageComponents">
           <h4>Click any of the buttons to go to your favorite page!</h4>

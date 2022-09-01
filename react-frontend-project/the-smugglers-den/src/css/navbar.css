@@ -85,9 +85,10 @@ a:hover {
     display: flex;
     font-size: 20px;
     height: fit-content;
-    width: 300px;
+    width: 270px;
   }
 
   .mainLogo {
+    width: 80px;
 }
 }

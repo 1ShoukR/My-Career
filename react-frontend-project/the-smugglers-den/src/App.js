@@ -7,7 +7,7 @@ function App() {
   return (
   <div className="App">
       <div className="mainPageContainer">
-        <p className='mainPageTitle'>Welcome to The Smuggler's Den</p>
+        <h1 className='mainPageTitle'>Welcome to The Smuggler's Den</h1>
         {/* <img
           src="https://see.fontimg.com/api/renderfont4/y0xm/eyJyIjoiZnMiLCJoIjoyOCwidyI6MTAwMCwiZnMiOjI4LCJmZ2MiOiIjMUMxQzFDIiwiYmdjIjoiI0YwRUFFQSJ9/V2VsY29tZSB0byBUaGUgU211Z2dsZXIncyBEZW4/star-jedi-outline.png"
           alt="The Smuggler's Den"

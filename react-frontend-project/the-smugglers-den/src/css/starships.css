@@ -108,11 +108,47 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
+ .h1StarshipCard {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .starshipsContainer{
+  margin: 0px;
+ }
+
 
 }
 
 
 @media (max-width: 500px) {
+  .navbar-nav{
+    gap: 5px;
+    margin-left: 120px;
+  }
   
+  #myNavbar {
+    width: 500px;
+  }
+  div#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .h1StarshipCard{
+    width: 300px;
+  }
+
+  .starshipsContainer{
+    width: fit-content;
+    margin-right: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+ .nextPageButtons {
+  display: flex;
+  flex-direction: column;
+ }
 }

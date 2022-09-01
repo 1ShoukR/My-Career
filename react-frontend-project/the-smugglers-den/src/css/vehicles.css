@@ -21,6 +21,12 @@
   margin: 10px 20px 20px;
 }
 
+.h1VehicleCard {
+  display: grid;
+  grid-template-columns: repeat(5, 300px);
+  gap: 50px;
+}
+
 .vehicleCardContainer {
   display: flex;
   flex-direction: column;
@@ -41,7 +47,15 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
+ .h1VehicleCard {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .favoritesContainer{
+  margin: 0px;
+ }
 
 }
 

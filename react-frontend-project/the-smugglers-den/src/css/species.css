@@ -98,7 +98,18 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+   .h1SpeciesCard {
+  display: flex;
+  flex-direction: column;
+ }
+ .speciesContainer{
+  gap: 10px;
+ }
+
+ .speciesCardContainer{
+  margin: 0px;
+ }
 
 }
 

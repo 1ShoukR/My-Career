@@ -56,11 +56,44 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
+ .h1FavoritesCard {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .favoritesContainer{
+  margin: 0px;
+ }
+
 
 }
 
 
 @media (max-width: 500px) {
+  .navbar-nav{
+    gap: 5px;
+    margin-left: 120px;
+  }
   
+  #myNavbar {
+    width: 500px;
+  }
+  div#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .h1FavoritesCard{
+    width: 300px;
+  }
+
+  .favoritesContainer{
+    width: fit-content;
+    margin-right: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
 }

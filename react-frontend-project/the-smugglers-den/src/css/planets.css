@@ -106,7 +106,18 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+   .h1PlanetCard {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .planetsCardContainer{
+  margin: 0px;
+ }
+   #myNavbar{
+    width: 900px;
+  }
 
 }
 

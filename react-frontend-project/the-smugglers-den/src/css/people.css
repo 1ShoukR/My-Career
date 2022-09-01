@@ -71,11 +71,45 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+    .nextPageButtons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #myNavbar{
+    width: 900px;
+  }
+  .h1PeopleCard {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .peopleCardContainer{
+  margin: 0px;
+ }
 
 }
 
 
 @media (max-width: 500px) {
-  
+  .nextPageButtons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+      .navbar-nav{
+        margin-left: 50px;
+    }
+  .nav {
+    flex-direction: column;
+    display: flex;
+    font-size: 20px;
+    height: fit-content;
+    width: 270px;
+  }
+
+  .mainLogo {
+    width: 80px;
+}
 }

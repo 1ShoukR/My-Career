@@ -1,7 +1,7 @@
 # Write a function that prints out the following information
 
-# def personInfo(info):
-#     print
+def personInfo(info):
+    print
 
 
 # modify your function so that it receives your 
@@ -14,16 +14,16 @@
 
 # invoke your function and pass it the correct number of argument
 
-# def info(first, last, city, favFood, hobbies):
-#   print(f"""
-#   {first}
-#   {last}
-#   {city}
-#   {favFood}
-#   {hobbies}
-#   """)
+def info(first, last, city, favFood, hobbies):
+  print(f"""
+  {first}
+  {last}
+  {city}
+  {favFood}
+  {hobbies}
+  """)
 
-# info("Rahmin", "Shoukoohi", "Atlanta", "burgers", "gaming")
+info("Rahmin", "Shoukoohi", "Atlanta", "burgers", "gaming")
 
 # ask the user to give you 
 # their first 
@@ -33,10 +33,10 @@
 #  hobbie 
 # and print out what they gave you
 
-# def userInput():
-#     name = input("what is your name ")
-#     lastName = input("what is your last name ")
-#     city = input("where do you live ")
-#     hobbie = input("what do you do in your free time? ")
-#     food = input("what is your favorite food? ")
-# print(userInput)()
+def userInput():
+    name = input("what is your name ")
+    lastName = input("what is your last name ")
+    city = input("where do you live ")
+    hobbie = input("what do you do in your free time? ")
+    food = input("what is your favorite food? ")
+print(userInput)()

@@ -14,8 +14,6 @@ class Family:
 
 
 
-
-
 class Occupation:
     def __init__(self, job = None, salary = None):
         self.job = job

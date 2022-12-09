@@ -126,3 +126,16 @@ print("Person car buy", person_car_buy)
 
 
 
+
+class Ben_Is_A_Bitch:
+    def __init__(self, is_ben_a_bitch = None):
+        self.is_ben_a_bitch = is_ben_a_bitch
+    def __str__(self):
+        return f"is ben a bitch? {self.is_ben_a_bitch}"
+
+
+ben = Ben_Is_A_Bitch(is_ben_a_bitch= "ben is fr a bitch")
+
+print(ben)
+
+

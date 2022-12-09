@@ -139,3 +139,18 @@ ben = Ben_Is_A_Bitch(is_ben_a_bitch= "ben is fr a bitch")
 print(ben)
 
 
+
+
+
+
+class AmIGettingThisJob:
+    def __init__(self, idk_am_i):
+        self.idk_am_i = idk_am_i
+    def __str__(self):
+        return f"will rahmin get this job? {self.idk_am_i}"
+
+job_aquisition = AmIGettingThisJob(idk_am_i="nah")
+
+
+print(job_aquisition)
+

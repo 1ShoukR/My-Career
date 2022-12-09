@@ -56,10 +56,10 @@ class Person(Human):
 
 rahmin = Person(name, age, hobbies)
 
-print(rahmin)
+print("This is rahmin 1 ",rahmin)
 rahmin.legs_blown_off()
 rahmin.update_occupation("coder", "$120,000")
-print(rahmin)
+print("This is rahmin 2 ",rahmin)
 
 
 # new_human = Human("brown", "black")

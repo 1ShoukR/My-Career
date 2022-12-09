@@ -154,3 +154,14 @@ job_aquisition = AmIGettingThisJob(idk_am_i="nah")
 
 print(job_aquisition)
 
+
+
+class DoesWillLikeMe(AmIGettingThisJob):
+    def __init__(self):
+        self.maybe_he_does = AmIGettingThisJob()
+    def __str__(self):
+        return f"Does will like rahmin: {self.maybe_he_does}"
+    def update_maybe_he_does(self, idk_am_i):
+        self.maybe_he_does.idk_am_i = idk_am_i
+
+
